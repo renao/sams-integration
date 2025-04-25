@@ -10,6 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      stable_version: ${{ steps.get_version.outputs.stable_version }}
+      zip_name: ${{ steps.zip.outputs.zip_name }}
+    
     steps:
     - uses: actions/checkout@v2
 
@@ -47,21 +51,24 @@ jobs:
       run: |
         version=$(grep -Po '(?<=Stable tag: ).*' release-plugin-directory/trunk/readme.txt | xargs)
         echo "stable_version=$version" >> $GITHUB_ENV
+        echo "stable_version=$version" >> $GITHUB_OUTPUT
 
     - name: Generate release zip-file
+      id: zip
       run: |
         mkdir -p zip-release/sams-integration
         cp -r release-plugin-directory/trunk/* zip-release/sams-integration/
         cd zip-release
-        zip_name="sams-integration-${{ env.stable_version }}.zip"
+        zip_name="sams-integration-${{ steps.get_version.outputs.stable_version }}.zip"
         zip -r ../$zip_name sams-integration
         echo "zip_name=$zip_name" >> $GITHUB_ENV
+        echo "zip_name=$zip_name" >> $GITHUB_OUTPUT
 
     - name: Upload Pipeline Release
       uses: actions/upload-artifact@v4
       with:
-        name: SAMS Integration ${{ env.stable_version }}
-        path: ${{ env.zip_name }}
+        name: SAMS Integration ${{ steps.get_version.outputs.stable_version }}
+        path: ${{ steps.zip.outputs.zip_name }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -83,14 +90,19 @@ jobs:
 #        cd svn-dir
 #        svn add --force .
 #        svn commit -m "Release version ${{ env.stable_version }}" --username "$SVN_USER" --password "$SVN_PASS" --no-auth-cache
+    - name: Download Release Artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: SAMS Integration ${{ needs.build.outputs.stable_version }}
+        path: release
 
     - name: Create GitHub Release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v${{ env.stable_version }}
-        release_name: "SAMS Integration v${{ env.stable_version }}"
+        tag_name: v${{ needs.build.outputs.stable_version }}
+        release_name: "SAMS Integration v${{ needs.build.outputs.stable_version }}"
         body: |
           New release of SAMS Integration Plugin.
         draft: false
@@ -102,6 +114,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: release/${{ env.zip_name }}
-        asset_name: ${{ env.zip_name }}
+        asset_path: release/${{ needs.build.outputs.zip_name }}
+        asset_name: ${{ needs.build.outputs.zip_name }}
         asset_content_type: application/zip
