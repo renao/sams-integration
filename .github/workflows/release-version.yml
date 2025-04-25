@@ -61,7 +61,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: SAMS Integration ${{ env.stable_version }}
-        path: zip-release/${{ env.zip_name }}
+        path: ${{ env.zip_name }}
 
   deploy:
     runs-on: ubuntu-latest
