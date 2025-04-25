@@ -37,7 +37,7 @@ Will be documented when the release acknoledged by the WordPress Plugins team.
 Will be updated when the entry in the plugin directory is ready
 
 ### Obtaining DVV division, match series, season etc. information
-The SAMS XML-interface is describes in the following wiki:
+The SAMS XML-interface is described in the following wiki:
 [XML Schnittstelle](http://wiki.sams-server.de/wiki/XML-Schnittstelle#Spielplan_und_Ergebnisse)
 
 ## License
