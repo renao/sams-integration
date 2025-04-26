@@ -34,3 +34,16 @@ function samsintegration_initialize_blocktypes() {
 	register_block_type( __DIR__ . '/build/blocks/sams-fixtures' );
 }
 add_action( 'init', 'samsintegration_initialize_blocktypes' );
+
+function sams_integration_get_template( $template_name ) {
+    $theme_template = locate_template( 'sams-integration/' . $template_name );
+    
+    if ( ! empty( $theme_template ) ) {
+        // if exists: use template from theme
+        return $theme_template;
+    } else {
+        // fallback on default template
+        return plugin_dir_path( __FILE__ ) . 'build/php/templates/' . $template_name;
+    }
+}
+
