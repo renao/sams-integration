@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "renao/sams-fixtures",
-	"version": "1.0.0",
+	"version": "1.2.0",
 	"title": "SAMS Fixtures",
 	"category": "widgets",
 	"icon": "analytics",
