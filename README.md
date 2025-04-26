@@ -40,6 +40,21 @@ Will be updated when the entry in the plugin directory is ready
 The SAMS XML-interface is described in the following wiki:
 [XML Schnittstelle](http://wiki.sams-server.de/wiki/XML-Schnittstelle#Spielplan_und_Ergebnisse)
 
+
+## Customizing Ranking and Fixtures
+
+Since version 1.2.0 you are able to override the default representation of the ranking and the fixtures view.
+
+Just add a new template file to the folder of your currently used theme:
+
+* Ranking: `sams-integration/ranking-template.php`
+* Fixtures: `sams-integration/fixtures-template.php`
+
+You can find the default implementation in the `sams-integration/build/php/templates/` folder to get a starting point how things are working.
+
+Perhaps some additional customizations will be added in the future (e.g. the format of the fixtures venues).
+
+
 ## License
 This piece of modern art is published with a GNU GPLv2 license. I will not take charge of any harm, damages or data losses that could be caused by this plugin. Use it on your own risk.
 
