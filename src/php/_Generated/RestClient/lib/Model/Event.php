@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * Event Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'uuid' => 'string',
-        '_links' => 'array<string,\OpenAPI\Client\Model\LinkDto>',
+        '_links' => 'array<string,\SAMSPlugin\RestClient\Model\LinkDto>',
         '_embedded' => 'array<string,object>',
         'name' => 'string',
         'shortname' => 'string',
@@ -74,7 +74,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
         'maximum_number_of_participants' => 'int',
         'used_capacity' => 'int',
         'registration_uri' => 'string',
-        'location' => '\OpenAPI\Client\Model\Location',
+        'location' => '\SAMSPlugin\RestClient\Model\Location',
         'event_type_uuid' => 'string'
     ];
 
@@ -445,7 +445,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets _links
      *
-     * @return array<string,\OpenAPI\Client\Model\LinkDto>|null
+     * @return array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null
      */
     public function getLinks()
     {
@@ -455,7 +455,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets _links
      *
-     * @param array<string,\OpenAPI\Client\Model\LinkDto>|null $_links _links
+     * @param array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null $_links _links
      *
      * @return self
      */
@@ -877,7 +877,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets location
      *
-     * @return \OpenAPI\Client\Model\Location|null
+     * @return \SAMSPlugin\RestClient\Model\Location|null
      */
     public function getLocation()
     {
@@ -887,7 +887,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets location
      *
-     * @param \OpenAPI\Client\Model\Location|null $location location
+     * @param \SAMSPlugin\RestClient\Model\Location|null $location location
      *
      * @return self
      */

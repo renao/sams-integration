@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSCompetitionsAPIApi
+# SAMSPlugin\RestClient\SAMSCompetitionsAPIApi
 
 
 
@@ -16,7 +16,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllCompetitions()`
 
 ```php
-getAllCompetitions($x_api_key, $page, $size, $association, $season): \OpenAPI\Client\Model\CompetitionPage
+getAllCompetitions($x_api_key, $page, $size, $association, $season): \SAMSPlugin\RestClient\Model\CompetitionPage
 ```
 
 Returns all available competitions as a paged list.
@@ -31,7 +31,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCompetitionsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCompetitionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -62,7 +62,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionPage**](../Model/CompetitionPage.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionPage**](../Model/CompetitionPage.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ No authorization required
 ## `getCompetitionByUuid()`
 
 ```php
-getCompetitionByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\CompetitionDto
+getCompetitionByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\CompetitionDto
 ```
 
 Returns a competition identified by the given UUID
@@ -93,7 +93,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCompetitionsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCompetitionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -118,7 +118,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionDto**](../Model/CompetitionDto.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionDto**](../Model/CompetitionDto.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ No authorization required
 ## `getMatchGroupsForCompetition()`
 
 ```php
-getMatchGroupsForCompetition($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\CompetitionMatchGroupPage
+getMatchGroupsForCompetition($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage
 ```
 
 Returns all match groups corresponding to the competition identified by the given UUID
@@ -149,7 +149,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCompetitionsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCompetitionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionMatchGroupPage**](../Model/CompetitionMatchGroupPage.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage**](../Model/CompetitionMatchGroupPage.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ No authorization required
 ## `getRankingsForCompetition()`
 
 ```php
-getRankingsForCompetition($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\CompetitionRankingsResourcePage
+getRankingsForCompetition($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage
 ```
 
 Returns the rankings of a competition identified by the given UUID.
@@ -209,7 +209,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCompetitionsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCompetitionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -238,7 +238,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionRankingsResourcePage**](../Model/CompetitionRankingsResourcePage.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage**](../Model/CompetitionRankingsResourcePage.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ No authorization required
 ## `getTeamsForCompetition()`
 
 ```php
-getTeamsForCompetition($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\TeamPage
+getTeamsForCompetition($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\TeamPage
 ```
 
 Returns all teams of a competition identified by the given UUID as a paged list.
@@ -271,7 +271,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCompetitionsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCompetitionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -300,7 +300,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TeamPage**](../Model/TeamPage.md)
+[**\SAMSPlugin\RestClient\Model\TeamPage**](../Model/TeamPage.md)
 
 ### Authorization
 

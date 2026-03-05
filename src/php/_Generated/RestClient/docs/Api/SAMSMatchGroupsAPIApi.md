@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSMatchGroupsAPIApi
+# SAMSPlugin\RestClient\SAMSMatchGroupsAPIApi
 
 
 
@@ -14,7 +14,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllMatchGroups()`
 
 ```php
-getAllMatchGroups($x_api_key, $page, $size, $association): \OpenAPI\Client\Model\CompetitionMatchGroupPage
+getAllMatchGroups($x_api_key, $page, $size, $association): \SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage
 ```
 
 Returns all available match groups as a paged list. The default page size is 20. The page size must not be greater than 100
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSMatchGroupsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSMatchGroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionMatchGroupPage**](../Model/CompetitionMatchGroupPage.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage**](../Model/CompetitionMatchGroupPage.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 ## `getMatchGroupByUuid()`
 
 ```php
-getMatchGroupByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\CompetitionMatchGroupDto
+getMatchGroupByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\CompetitionMatchGroupDto
 ```
 
 Returns a match group identified by the given UUID
@@ -87,7 +87,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSMatchGroupsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSMatchGroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -112,7 +112,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionMatchGroupDto**](../Model/CompetitionMatchGroupDto.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionMatchGroupDto**](../Model/CompetitionMatchGroupDto.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 ## `getMatchesByMatchGroup()`
 
 ```php
-getMatchesByMatchGroup($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\CompetitionMatchPage
+getMatchesByMatchGroup($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\CompetitionMatchPage
 ```
 
 Returns all matches corresponding to the match group identified by the given UUID
@@ -143,7 +143,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSMatchGroupsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSMatchGroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -172,7 +172,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionMatchPage**](../Model/CompetitionMatchPage.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionMatchPage**](../Model/CompetitionMatchPage.md)
 
 ### Authorization
 

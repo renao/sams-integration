@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * ValidationError Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ValidationError implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'violations' => '\OpenAPI\Client\Model\ConstraintViolation[]'
+        'violations' => '\SAMSPlugin\RestClient\Model\ConstraintViolation[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ValidationError implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets violations
      *
-     * @return \OpenAPI\Client\Model\ConstraintViolation[]|null
+     * @return \SAMSPlugin\RestClient\Model\ConstraintViolation[]|null
      */
     public function getViolations()
     {
@@ -302,7 +302,7 @@ class ValidationError implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets violations
      *
-     * @param \OpenAPI\Client\Model\ConstraintViolation[]|null $violations violations
+     * @param \SAMSPlugin\RestClient\Model\ConstraintViolation[]|null $violations violations
      *
      * @return self
      */

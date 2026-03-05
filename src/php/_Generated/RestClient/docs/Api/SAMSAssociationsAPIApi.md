@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSAssociationsAPIApi
+# SAMSPlugin\RestClient\SAMSAssociationsAPIApi
 
 
 
@@ -15,7 +15,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAssociationByUuid()`
 
 ```php
-getAssociationByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\Association
+getAssociationByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\Association
 ```
 
 Returns an association identified by the given UUID
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSAssociationsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSAssociationsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -53,7 +53,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Association**](../Model/Association.md)
+[**\SAMSPlugin\RestClient\Model\Association**](../Model/Association.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `getAssociations()`
 
 ```php
-getAssociations($x_api_key, $page, $size, $association): \OpenAPI\Client\Model\AssociationResourcePage
+getAssociations($x_api_key, $page, $size, $association): \SAMSPlugin\RestClient\Model\AssociationResourcePage
 ```
 
 Returns all available associations.
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSAssociationsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSAssociationsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AssociationResourcePage**](../Model/AssociationResourcePage.md)
+[**\SAMSPlugin\RestClient\Model\AssociationResourcePage**](../Model/AssociationResourcePage.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ No authorization required
 ## `getCommitteesForAssociation()`
 
 ```php
-getCommitteesForAssociation($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\CommitteePage
+getCommitteesForAssociation($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\CommitteePage
 ```
 
 Returns the list of committees.
@@ -148,7 +148,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSAssociationsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSAssociationsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -177,7 +177,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CommitteePage**](../Model/CommitteePage.md)
+[**\SAMSPlugin\RestClient\Model\CommitteePage**](../Model/CommitteePage.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
 ## `getSportsclubsForAssociation()`
 
 ```php
-getSportsclubsForAssociation($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\SportsclubPage
+getSportsclubsForAssociation($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\SportsclubPage
 ```
 
 
@@ -210,7 +210,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSAssociationsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSAssociationsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -239,7 +239,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SportsclubPage**](../Model/SportsclubPage.md)
+[**\SAMSPlugin\RestClient\Model\SportsclubPage**](../Model/SportsclubPage.md)
 
 ### Authorization
 

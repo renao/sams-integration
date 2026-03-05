@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSMatchDaysAPIApi
+# SAMSPlugin\RestClient\SAMSMatchDaysAPIApi
 
 
 
@@ -14,7 +14,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllMatchDays()`
 
 ```php
-getAllMatchDays($x_api_key, $page, $size, $association): \OpenAPI\Client\Model\LeagueMatchDayPage
+getAllMatchDays($x_api_key, $page, $size, $association): \SAMSPlugin\RestClient\Model\LeagueMatchDayPage
 ```
 
 Returns all available match days as a paged list.
@@ -29,7 +29,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSMatchDaysAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSMatchDaysAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueMatchDayPage**](../Model/LeagueMatchDayPage.md)
+[**\SAMSPlugin\RestClient\Model\LeagueMatchDayPage**](../Model/LeagueMatchDayPage.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 ## `getMatchDayByUuid()`
 
 ```php
-getMatchDayByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\LeagueMatchDayDto
+getMatchDayByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\LeagueMatchDayDto
 ```
 
 Returns a match day identified by the given UUID
@@ -89,7 +89,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSMatchDaysAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSMatchDaysAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -114,7 +114,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueMatchDayDto**](../Model/LeagueMatchDayDto.md)
+[**\SAMSPlugin\RestClient\Model\LeagueMatchDayDto**](../Model/LeagueMatchDayDto.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ No authorization required
 ## `getMatchesByMatchDay()`
 
 ```php
-getMatchesByMatchDay($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\LeagueMatchPage
+getMatchesByMatchDay($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\LeagueMatchPage
 ```
 
 Returns all matches of a match day based on the given UUID. The default page size is 20. The page size must not be greater than 100
@@ -145,7 +145,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSMatchDaysAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSMatchDaysAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -174,7 +174,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueMatchPage**](../Model/LeagueMatchPage.md)
+[**\SAMSPlugin\RestClient\Model\LeagueMatchPage**](../Model/LeagueMatchPage.md)
 
 ### Authorization
 

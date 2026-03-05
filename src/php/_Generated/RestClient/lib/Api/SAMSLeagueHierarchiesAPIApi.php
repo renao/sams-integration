@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SAMSPlugin\RestClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SAMSPlugin\RestClient\ApiException;
+use SAMSPlugin\RestClient\Configuration;
+use SAMSPlugin\RestClient\FormDataProcessor;
+use SAMSPlugin\RestClient\HeaderSelector;
+use SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * SAMSLeagueHierarchiesAPIApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,9 +149,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  string|null $association Filter for association using the given UUID. Defaults to no filtering. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllLeagueHierarchies'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueHierarchyPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueHierarchyPage
      */
     public function getAllLeagueHierarchies($x_api_key = null, $page = null, $size = null, $for_season = null, $association = null, string $contentType = self::contentTypes['getAllLeagueHierarchies'][0])
     {
@@ -171,9 +171,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  string|null $association Filter for association using the given UUID. Defaults to no filtering. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllLeagueHierarchies'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueHierarchyPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueHierarchyPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllLeagueHierarchiesWithHttpInfo($x_api_key = null, $page = null, $size = null, $for_season = null, $association = null, string $contentType = self::contentTypes['getAllLeagueHierarchies'][0])
     {
@@ -205,31 +205,31 @@ class SAMSLeagueHierarchiesAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\LeagueHierarchyPage',
+                        '\SAMSPlugin\RestClient\Model\LeagueHierarchyPage',
                         $request,
                         $response,
                     );
@@ -251,7 +251,7 @@ class SAMSLeagueHierarchiesAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\LeagueHierarchyPage',
+                '\SAMSPlugin\RestClient\Model\LeagueHierarchyPage',
                 $request,
                 $response,
             );
@@ -260,7 +260,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -268,7 +268,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -276,7 +276,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -284,7 +284,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -292,7 +292,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LeagueHierarchyPage',
+                        '\SAMSPlugin\RestClient\Model\LeagueHierarchyPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,7 +346,7 @@ class SAMSLeagueHierarchiesAPIApi
      */
     public function getAllLeagueHierarchiesAsyncWithHttpInfo($x_api_key = null, $page = null, $size = null, $for_season = null, $association = null, string $contentType = self::contentTypes['getAllLeagueHierarchies'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LeagueHierarchyPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\LeagueHierarchyPage';
         $request = $this->getAllLeagueHierarchiesRequest($x_api_key, $page, $size, $for_season, $association, $contentType);
 
         return $this->client
@@ -522,9 +522,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompetitionsByLeagueHierarchy'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionPage
      */
     public function getCompetitionsByLeagueHierarchy($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getCompetitionsByLeagueHierarchy'][0])
     {
@@ -543,9 +543,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompetitionsByLeagueHierarchy'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompetitionsByLeagueHierarchyWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getCompetitionsByLeagueHierarchy'][0])
     {
@@ -577,31 +577,31 @@ class SAMSLeagueHierarchiesAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CompetitionPage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionPage',
                         $request,
                         $response,
                     );
@@ -623,7 +623,7 @@ class SAMSLeagueHierarchiesAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CompetitionPage',
+                '\SAMSPlugin\RestClient\Model\CompetitionPage',
                 $request,
                 $response,
             );
@@ -632,7 +632,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -640,7 +640,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -648,7 +648,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -656,7 +656,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -664,7 +664,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CompetitionPage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -716,7 +716,7 @@ class SAMSLeagueHierarchiesAPIApi
      */
     public function getCompetitionsByLeagueHierarchyAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getCompetitionsByLeagueHierarchy'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CompetitionPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\CompetitionPage';
         $request = $this->getCompetitionsByLeagueHierarchyRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client
@@ -884,9 +884,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLeagueHierarchyByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueHierarchyDto
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueHierarchyDto
      */
     public function getLeagueHierarchyByUuid($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLeagueHierarchyByUuid'][0])
     {
@@ -903,9 +903,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLeagueHierarchyByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueHierarchyDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueHierarchyDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLeagueHierarchyByUuidWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLeagueHierarchyByUuid'][0])
     {
@@ -937,31 +937,31 @@ class SAMSLeagueHierarchiesAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\LeagueHierarchyDto',
+                        '\SAMSPlugin\RestClient\Model\LeagueHierarchyDto',
                         $request,
                         $response,
                     );
@@ -983,7 +983,7 @@ class SAMSLeagueHierarchiesAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\LeagueHierarchyDto',
+                '\SAMSPlugin\RestClient\Model\LeagueHierarchyDto',
                 $request,
                 $response,
             );
@@ -992,7 +992,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1000,7 +1000,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1008,7 +1008,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1016,7 +1016,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1024,7 +1024,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LeagueHierarchyDto',
+                        '\SAMSPlugin\RestClient\Model\LeagueHierarchyDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1072,7 +1072,7 @@ class SAMSLeagueHierarchiesAPIApi
      */
     public function getLeagueHierarchyByUuidAsyncWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLeagueHierarchyByUuid'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LeagueHierarchyDto';
+        $returnType = '\SAMSPlugin\RestClient\Model\LeagueHierarchyDto';
         $request = $this->getLeagueHierarchyByUuidRequest($uuid, $x_api_key, $contentType);
 
         return $this->client
@@ -1220,9 +1220,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLeaguesByLeagueHierarchy'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeaguePage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeaguePage
      */
     public function getLeaguesByLeagueHierarchy($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getLeaguesByLeagueHierarchy'][0])
     {
@@ -1241,9 +1241,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLeaguesByLeagueHierarchy'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeaguePage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeaguePage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLeaguesByLeagueHierarchyWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getLeaguesByLeagueHierarchy'][0])
     {
@@ -1275,31 +1275,31 @@ class SAMSLeagueHierarchiesAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\LeaguePage',
+                        '\SAMSPlugin\RestClient\Model\LeaguePage',
                         $request,
                         $response,
                     );
@@ -1321,7 +1321,7 @@ class SAMSLeagueHierarchiesAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\LeaguePage',
+                '\SAMSPlugin\RestClient\Model\LeaguePage',
                 $request,
                 $response,
             );
@@ -1330,7 +1330,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1338,7 +1338,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1346,7 +1346,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1354,7 +1354,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1362,7 +1362,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LeaguePage',
+                        '\SAMSPlugin\RestClient\Model\LeaguePage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1414,7 +1414,7 @@ class SAMSLeagueHierarchiesAPIApi
      */
     public function getLeaguesByLeagueHierarchyAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getLeaguesByLeagueHierarchy'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LeaguePage';
+        $returnType = '\SAMSPlugin\RestClient\Model\LeaguePage';
         $request = $this->getLeaguesByLeagueHierarchyRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client
@@ -1584,9 +1584,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSuperCompetitionsByLeagueHierarchy'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\SuperCompetitionPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\SuperCompetitionPage
      */
     public function getSuperCompetitionsByLeagueHierarchy($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getSuperCompetitionsByLeagueHierarchy'][0])
     {
@@ -1605,9 +1605,9 @@ class SAMSLeagueHierarchiesAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSuperCompetitionsByLeagueHierarchy'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\SuperCompetitionPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\SuperCompetitionPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSuperCompetitionsByLeagueHierarchyWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getSuperCompetitionsByLeagueHierarchy'][0])
     {
@@ -1639,31 +1639,31 @@ class SAMSLeagueHierarchiesAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\SuperCompetitionPage',
+                        '\SAMSPlugin\RestClient\Model\SuperCompetitionPage',
                         $request,
                         $response,
                     );
@@ -1685,7 +1685,7 @@ class SAMSLeagueHierarchiesAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\SuperCompetitionPage',
+                '\SAMSPlugin\RestClient\Model\SuperCompetitionPage',
                 $request,
                 $response,
             );
@@ -1694,7 +1694,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1702,7 +1702,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1710,7 +1710,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1718,7 +1718,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1726,7 +1726,7 @@ class SAMSLeagueHierarchiesAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SuperCompetitionPage',
+                        '\SAMSPlugin\RestClient\Model\SuperCompetitionPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1778,7 +1778,7 @@ class SAMSLeagueHierarchiesAPIApi
      */
     public function getSuperCompetitionsByLeagueHierarchyAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getSuperCompetitionsByLeagueHierarchy'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SuperCompetitionPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\SuperCompetitionPage';
         $request = $this->getSuperCompetitionsByLeagueHierarchyRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client

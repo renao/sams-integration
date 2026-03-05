@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * HalRepresentation Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class HalRepresentation implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_links' => '\OpenAPI\Client\Model\Links',
-        '_embedded' => '\OpenAPI\Client\Model\Embedded'
+        '_links' => '\SAMSPlugin\RestClient\Model\Links',
+        '_embedded' => '\SAMSPlugin\RestClient\Model\Embedded'
     ];
 
     /**
@@ -299,7 +299,7 @@ class HalRepresentation implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets _links
      *
-     * @return \OpenAPI\Client\Model\Links|null
+     * @return \SAMSPlugin\RestClient\Model\Links|null
      */
     public function getLinks()
     {
@@ -309,7 +309,7 @@ class HalRepresentation implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets _links
      *
-     * @param \OpenAPI\Client\Model\Links|null $_links _links
+     * @param \SAMSPlugin\RestClient\Model\Links|null $_links _links
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class HalRepresentation implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets _embedded
      *
-     * @return \OpenAPI\Client\Model\Embedded|null
+     * @return \SAMSPlugin\RestClient\Model\Embedded|null
      */
     public function getEmbedded()
     {
@@ -336,7 +336,7 @@ class HalRepresentation implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets _embedded
      *
-     * @param \OpenAPI\Client\Model\Embedded|null $_embedded _embedded
+     * @param \SAMSPlugin\RestClient\Model\Embedded|null $_embedded _embedded
      *
      * @return self
      */

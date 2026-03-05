@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SAMSPlugin\RestClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SAMSPlugin\RestClient\ApiException;
+use SAMSPlugin\RestClient\Configuration;
+use SAMSPlugin\RestClient\FormDataProcessor;
+use SAMSPlugin\RestClient\HeaderSelector;
+use SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * SAMSLeagueMatchesAPIApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,9 +143,9 @@ class SAMSLeagueMatchesAPIApi
      * @param  string|null $for_team Filter by team UUID: Find all matches attended by a particular team. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllLeagueMatches'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueMatchPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueMatchPage
      */
     public function getAllLeagueMatches($x_api_key = null, $page = null, $size = null, $association = null, $for_season = null, $for_league = null, $for_sportsclub = null, $for_team = null, string $contentType = self::contentTypes['getAllLeagueMatches'][0])
     {
@@ -168,9 +168,9 @@ class SAMSLeagueMatchesAPIApi
      * @param  string|null $for_team Filter by team UUID: Find all matches attended by a particular team. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllLeagueMatches'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueMatchPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueMatchPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllLeagueMatchesWithHttpInfo($x_api_key = null, $page = null, $size = null, $association = null, $for_season = null, $for_league = null, $for_sportsclub = null, $for_team = null, string $contentType = self::contentTypes['getAllLeagueMatches'][0])
     {
@@ -202,31 +202,31 @@ class SAMSLeagueMatchesAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\LeagueMatchPage',
+                        '\SAMSPlugin\RestClient\Model\LeagueMatchPage',
                         $request,
                         $response,
                     );
@@ -248,7 +248,7 @@ class SAMSLeagueMatchesAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\LeagueMatchPage',
+                '\SAMSPlugin\RestClient\Model\LeagueMatchPage',
                 $request,
                 $response,
             );
@@ -257,7 +257,7 @@ class SAMSLeagueMatchesAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -265,7 +265,7 @@ class SAMSLeagueMatchesAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class SAMSLeagueMatchesAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -281,7 +281,7 @@ class SAMSLeagueMatchesAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -289,7 +289,7 @@ class SAMSLeagueMatchesAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LeagueMatchPage',
+                        '\SAMSPlugin\RestClient\Model\LeagueMatchPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -349,7 +349,7 @@ class SAMSLeagueMatchesAPIApi
      */
     public function getAllLeagueMatchesAsyncWithHttpInfo($x_api_key = null, $page = null, $size = null, $association = null, $for_season = null, $for_league = null, $for_sportsclub = null, $for_team = null, string $contentType = self::contentTypes['getAllLeagueMatches'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LeagueMatchPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\LeagueMatchPage';
         $request = $this->getAllLeagueMatchesRequest($x_api_key, $page, $size, $association, $for_season, $for_league, $for_sportsclub, $for_team, $contentType);
 
         return $this->client
@@ -556,9 +556,9 @@ class SAMSLeagueMatchesAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLeagueMatchByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueMatchDto
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueMatchDto
      */
     public function getLeagueMatchByUuid($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLeagueMatchByUuid'][0])
     {
@@ -575,9 +575,9 @@ class SAMSLeagueMatchesAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLeagueMatchByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LeagueMatchDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LeagueMatchDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLeagueMatchByUuidWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLeagueMatchByUuid'][0])
     {
@@ -609,31 +609,31 @@ class SAMSLeagueMatchesAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\LeagueMatchDto',
+                        '\SAMSPlugin\RestClient\Model\LeagueMatchDto',
                         $request,
                         $response,
                     );
@@ -655,7 +655,7 @@ class SAMSLeagueMatchesAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\LeagueMatchDto',
+                '\SAMSPlugin\RestClient\Model\LeagueMatchDto',
                 $request,
                 $response,
             );
@@ -664,7 +664,7 @@ class SAMSLeagueMatchesAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -672,7 +672,7 @@ class SAMSLeagueMatchesAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -680,7 +680,7 @@ class SAMSLeagueMatchesAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -688,7 +688,7 @@ class SAMSLeagueMatchesAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -696,7 +696,7 @@ class SAMSLeagueMatchesAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LeagueMatchDto',
+                        '\SAMSPlugin\RestClient\Model\LeagueMatchDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -744,7 +744,7 @@ class SAMSLeagueMatchesAPIApi
      */
     public function getLeagueMatchByUuidAsyncWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLeagueMatchByUuid'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LeagueMatchDto';
+        $returnType = '\SAMSPlugin\RestClient\Model\LeagueMatchDto';
         $request = $this->getLeagueMatchByUuidRequest($uuid, $x_api_key, $contentType);
 
         return $this->client

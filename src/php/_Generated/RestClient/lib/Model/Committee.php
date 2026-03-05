@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * Committee Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class Committee implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'uuid' => 'string',
-        '_links' => 'array<string,\OpenAPI\Client\Model\LinkDto>',
+        '_links' => 'array<string,\SAMSPlugin\RestClient\Model\LinkDto>',
         '_embedded' => 'array<string,object>',
         'association_uuid' => 'string',
-        'members' => '\OpenAPI\Client\Model\CommitteeMember[]',
+        'members' => '\SAMSPlugin\RestClient\Model\CommitteeMember[]',
         'name' => 'string',
         'shortname' => 'string',
         'description' => 'string',
@@ -382,7 +382,7 @@ class Committee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets _links
      *
-     * @return array<string,\OpenAPI\Client\Model\LinkDto>|null
+     * @return array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null
      */
     public function getLinks()
     {
@@ -392,7 +392,7 @@ class Committee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets _links
      *
-     * @param array<string,\OpenAPI\Client\Model\LinkDto>|null $_links _links
+     * @param array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null $_links _links
      *
      * @return self
      */
@@ -463,7 +463,7 @@ class Committee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets members
      *
-     * @return \OpenAPI\Client\Model\CommitteeMember[]|null
+     * @return \SAMSPlugin\RestClient\Model\CommitteeMember[]|null
      */
     public function getMembers()
     {
@@ -473,7 +473,7 @@ class Committee implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets members
      *
-     * @param \OpenAPI\Client\Model\CommitteeMember[]|null $members members
+     * @param \SAMSPlugin\RestClient\Model\CommitteeMember[]|null $members members
      *
      * @return self
      */

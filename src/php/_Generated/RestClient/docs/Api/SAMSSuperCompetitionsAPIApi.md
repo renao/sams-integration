@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSSuperCompetitionsAPIApi
+# SAMSPlugin\RestClient\SAMSSuperCompetitionsAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllSuperCompetitions()`
 
 ```php
-getAllSuperCompetitions($x_api_key, $page, $size, $association, $season): \OpenAPI\Client\Model\SuperCompetitionPage
+getAllSuperCompetitions($x_api_key, $page, $size, $association, $season): \SAMSPlugin\RestClient\Model\SuperCompetitionPage
 ```
 
 Returns all available super competitions as a paged list.
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSSuperCompetitionsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSSuperCompetitionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SuperCompetitionPage**](../Model/SuperCompetitionPage.md)
+[**\SAMSPlugin\RestClient\Model\SuperCompetitionPage**](../Model/SuperCompetitionPage.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ No authorization required
 ## `getSuperCompetitionByUuid()`
 
 ```php
-getSuperCompetitionByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\SuperCompetitionDto
+getSuperCompetitionByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\SuperCompetitionDto
 ```
 
 Returns a super competition identified by the given UUID
@@ -90,7 +90,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSSuperCompetitionsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSSuperCompetitionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SuperCompetitionDto**](../Model/SuperCompetitionDto.md)
+[**\SAMSPlugin\RestClient\Model\SuperCompetitionDto**](../Model/SuperCompetitionDto.md)
 
 ### Authorization
 

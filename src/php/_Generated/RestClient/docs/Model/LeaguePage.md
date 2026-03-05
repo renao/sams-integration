@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **total_elements** | **int** |  | [optional]
 **number_of_elements** | **int** |  | [optional]
-**_links** | [**array<string,\OpenAPI\Client\Model\LinkDto>**](LinkDto.md) |  | [optional]
+**_links** | [**array<string,\SAMSPlugin\RestClient\Model\LinkDto>**](LinkDto.md) |  | [optional]
 **_embedded** | **array<string,object>** |  | [optional]
-**content** | [**\OpenAPI\Client\Model\LeagueDto[]**](LeagueDto.md) |  | [optional]
+**content** | [**\SAMSPlugin\RestClient\Model\LeagueDto[]**](LeagueDto.md) |  | [optional]
 **empty** | **bool** |  | [optional]
 **total_pages** | **int** |  | [optional]
 **first** | **bool** |  | [optional]

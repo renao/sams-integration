@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * Location Class Doc Comment
  *
  * @category Class
  * @description A location comprises the location&#39;s name, its address, and its geographical coordinates if available
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,12 +59,12 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'uuid' => 'string',
-        '_links' => 'array<string,\OpenAPI\Client\Model\LinkDto>',
+        '_links' => 'array<string,\SAMSPlugin\RestClient\Model\LinkDto>',
         '_embedded' => 'array<string,object>',
         'name' => 'string',
         'longitude' => 'float',
         'latitude' => 'float',
-        'address' => '\OpenAPI\Client\Model\Address'
+        'address' => '\SAMSPlugin\RestClient\Model\Address'
     ];
 
     /**
@@ -362,7 +362,7 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets _links
      *
-     * @return array<string,\OpenAPI\Client\Model\LinkDto>|null
+     * @return array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null
      */
     public function getLinks()
     {
@@ -372,7 +372,7 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets _links
      *
-     * @param array<string,\OpenAPI\Client\Model\LinkDto>|null $_links _links
+     * @param array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null $_links _links
      *
      * @return self
      */
@@ -497,7 +497,7 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\Address|null
+     * @return \SAMSPlugin\RestClient\Model\Address|null
      */
     public function getAddress()
     {
@@ -507,7 +507,7 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\Address|null $address address
+     * @param \SAMSPlugin\RestClient\Model\Address|null $address address
      *
      * @return self
      */

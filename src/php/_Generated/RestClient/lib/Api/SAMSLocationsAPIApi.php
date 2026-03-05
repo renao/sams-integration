@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SAMSPlugin\RestClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SAMSPlugin\RestClient\ApiException;
+use SAMSPlugin\RestClient\Configuration;
+use SAMSPlugin\RestClient\FormDataProcessor;
+use SAMSPlugin\RestClient\HeaderSelector;
+use SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * SAMSLocationsAPIApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,9 +138,9 @@ class SAMSLocationsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllLocations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LocationResourcePage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LocationResourcePage
      */
     public function getAllLocations($x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getAllLocations'][0])
     {
@@ -158,9 +158,9 @@ class SAMSLocationsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllLocations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\LocationResourcePage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\LocationResourcePage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllLocationsWithHttpInfo($x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getAllLocations'][0])
     {
@@ -192,31 +192,31 @@ class SAMSLocationsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\LocationResourcePage',
+                        '\SAMSPlugin\RestClient\Model\LocationResourcePage',
                         $request,
                         $response,
                     );
@@ -238,7 +238,7 @@ class SAMSLocationsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\LocationResourcePage',
+                '\SAMSPlugin\RestClient\Model\LocationResourcePage',
                 $request,
                 $response,
             );
@@ -247,7 +247,7 @@ class SAMSLocationsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class SAMSLocationsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class SAMSLocationsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -271,7 +271,7 @@ class SAMSLocationsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -279,7 +279,7 @@ class SAMSLocationsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LocationResourcePage',
+                        '\SAMSPlugin\RestClient\Model\LocationResourcePage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -329,7 +329,7 @@ class SAMSLocationsAPIApi
      */
     public function getAllLocationsAsyncWithHttpInfo($x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getAllLocations'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LocationResourcePage';
+        $returnType = '\SAMSPlugin\RestClient\Model\LocationResourcePage';
         $request = $this->getAllLocationsRequest($x_api_key, $page, $size, $contentType);
 
         return $this->client
@@ -481,9 +481,9 @@ class SAMSLocationsAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLocationByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\Location
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\Location
      */
     public function getLocationByUuid($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLocationByUuid'][0])
     {
@@ -500,9 +500,9 @@ class SAMSLocationsAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLocationByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\Location, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\Location, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLocationByUuidWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLocationByUuid'][0])
     {
@@ -534,31 +534,31 @@ class SAMSLocationsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Location',
+                        '\SAMSPlugin\RestClient\Model\Location',
                         $request,
                         $response,
                     );
@@ -580,7 +580,7 @@ class SAMSLocationsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Location',
+                '\SAMSPlugin\RestClient\Model\Location',
                 $request,
                 $response,
             );
@@ -589,7 +589,7 @@ class SAMSLocationsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -597,7 +597,7 @@ class SAMSLocationsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -605,7 +605,7 @@ class SAMSLocationsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -613,7 +613,7 @@ class SAMSLocationsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -621,7 +621,7 @@ class SAMSLocationsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Location',
+                        '\SAMSPlugin\RestClient\Model\Location',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -669,7 +669,7 @@ class SAMSLocationsAPIApi
      */
     public function getLocationByUuidAsyncWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getLocationByUuid'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Location';
+        $returnType = '\SAMSPlugin\RestClient\Model\Location';
         $request = $this->getLocationByUuidRequest($uuid, $x_api_key, $contentType);
 
         return $this->client

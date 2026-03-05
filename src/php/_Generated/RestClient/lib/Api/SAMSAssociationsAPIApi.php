@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SAMSPlugin\RestClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SAMSPlugin\RestClient\ApiException;
+use SAMSPlugin\RestClient\Configuration;
+use SAMSPlugin\RestClient\FormDataProcessor;
+use SAMSPlugin\RestClient\HeaderSelector;
+use SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * SAMSAssociationsAPIApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,9 +143,9 @@ class SAMSAssociationsAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssociationByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\Association
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\Association
      */
     public function getAssociationByUuid($uuid, $x_api_key = null, string $contentType = self::contentTypes['getAssociationByUuid'][0])
     {
@@ -162,9 +162,9 @@ class SAMSAssociationsAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssociationByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\Association, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\Association, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssociationByUuidWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getAssociationByUuid'][0])
     {
@@ -196,31 +196,31 @@ class SAMSAssociationsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\Association',
+                        '\SAMSPlugin\RestClient\Model\Association',
                         $request,
                         $response,
                     );
@@ -242,7 +242,7 @@ class SAMSAssociationsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\Association',
+                '\SAMSPlugin\RestClient\Model\Association',
                 $request,
                 $response,
             );
@@ -251,7 +251,7 @@ class SAMSAssociationsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -259,7 +259,7 @@ class SAMSAssociationsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -267,7 +267,7 @@ class SAMSAssociationsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -275,7 +275,7 @@ class SAMSAssociationsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -283,7 +283,7 @@ class SAMSAssociationsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Association',
+                        '\SAMSPlugin\RestClient\Model\Association',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class SAMSAssociationsAPIApi
      */
     public function getAssociationByUuidAsyncWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getAssociationByUuid'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Association';
+        $returnType = '\SAMSPlugin\RestClient\Model\Association';
         $request = $this->getAssociationByUuidRequest($uuid, $x_api_key, $contentType);
 
         return $this->client
@@ -479,9 +479,9 @@ class SAMSAssociationsAPIApi
      * @param  string|null $association Filter for association using the given UUID. Defaults to no filtering. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssociations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\AssociationResourcePage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\AssociationResourcePage
      */
     public function getAssociations($x_api_key = null, $page = null, $size = null, $association = null, string $contentType = self::contentTypes['getAssociations'][0])
     {
@@ -500,9 +500,9 @@ class SAMSAssociationsAPIApi
      * @param  string|null $association Filter for association using the given UUID. Defaults to no filtering. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAssociations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\AssociationResourcePage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\AssociationResourcePage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssociationsWithHttpInfo($x_api_key = null, $page = null, $size = null, $association = null, string $contentType = self::contentTypes['getAssociations'][0])
     {
@@ -534,31 +534,31 @@ class SAMSAssociationsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\AssociationResourcePage',
+                        '\SAMSPlugin\RestClient\Model\AssociationResourcePage',
                         $request,
                         $response,
                     );
@@ -580,7 +580,7 @@ class SAMSAssociationsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\AssociationResourcePage',
+                '\SAMSPlugin\RestClient\Model\AssociationResourcePage',
                 $request,
                 $response,
             );
@@ -589,7 +589,7 @@ class SAMSAssociationsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -597,7 +597,7 @@ class SAMSAssociationsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -605,7 +605,7 @@ class SAMSAssociationsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -613,7 +613,7 @@ class SAMSAssociationsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -621,7 +621,7 @@ class SAMSAssociationsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AssociationResourcePage',
+                        '\SAMSPlugin\RestClient\Model\AssociationResourcePage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -673,7 +673,7 @@ class SAMSAssociationsAPIApi
      */
     public function getAssociationsAsyncWithHttpInfo($x_api_key = null, $page = null, $size = null, $association = null, string $contentType = self::contentTypes['getAssociations'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AssociationResourcePage';
+        $returnType = '\SAMSPlugin\RestClient\Model\AssociationResourcePage';
         $request = $this->getAssociationsRequest($x_api_key, $page, $size, $association, $contentType);
 
         return $this->client
@@ -838,9 +838,9 @@ class SAMSAssociationsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCommitteesForAssociation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CommitteePage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CommitteePage
      */
     public function getCommitteesForAssociation($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getCommitteesForAssociation'][0])
     {
@@ -859,9 +859,9 @@ class SAMSAssociationsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCommitteesForAssociation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CommitteePage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CommitteePage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCommitteesForAssociationWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getCommitteesForAssociation'][0])
     {
@@ -893,31 +893,31 @@ class SAMSAssociationsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CommitteePage',
+                        '\SAMSPlugin\RestClient\Model\CommitteePage',
                         $request,
                         $response,
                     );
@@ -939,7 +939,7 @@ class SAMSAssociationsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CommitteePage',
+                '\SAMSPlugin\RestClient\Model\CommitteePage',
                 $request,
                 $response,
             );
@@ -948,7 +948,7 @@ class SAMSAssociationsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -956,7 +956,7 @@ class SAMSAssociationsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,7 +964,7 @@ class SAMSAssociationsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -972,7 +972,7 @@ class SAMSAssociationsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -980,7 +980,7 @@ class SAMSAssociationsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CommitteePage',
+                        '\SAMSPlugin\RestClient\Model\CommitteePage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1032,7 +1032,7 @@ class SAMSAssociationsAPIApi
      */
     public function getCommitteesForAssociationAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getCommitteesForAssociation'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CommitteePage';
+        $returnType = '\SAMSPlugin\RestClient\Model\CommitteePage';
         $request = $this->getCommitteesForAssociationRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client
@@ -1200,9 +1200,9 @@ class SAMSAssociationsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSportsclubsForAssociation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\SportsclubPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\SportsclubPage
      */
     public function getSportsclubsForAssociation($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getSportsclubsForAssociation'][0])
     {
@@ -1219,9 +1219,9 @@ class SAMSAssociationsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSportsclubsForAssociation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\SportsclubPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\SportsclubPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSportsclubsForAssociationWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getSportsclubsForAssociation'][0])
     {
@@ -1253,31 +1253,31 @@ class SAMSAssociationsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\SportsclubPage',
+                        '\SAMSPlugin\RestClient\Model\SportsclubPage',
                         $request,
                         $response,
                     );
@@ -1299,7 +1299,7 @@ class SAMSAssociationsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\SportsclubPage',
+                '\SAMSPlugin\RestClient\Model\SportsclubPage',
                 $request,
                 $response,
             );
@@ -1308,7 +1308,7 @@ class SAMSAssociationsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1316,7 +1316,7 @@ class SAMSAssociationsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1324,7 +1324,7 @@ class SAMSAssociationsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1332,7 +1332,7 @@ class SAMSAssociationsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1340,7 +1340,7 @@ class SAMSAssociationsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SportsclubPage',
+                        '\SAMSPlugin\RestClient\Model\SportsclubPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1388,7 +1388,7 @@ class SAMSAssociationsAPIApi
      */
     public function getSportsclubsForAssociationAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getSportsclubsForAssociation'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SportsclubPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\SportsclubPage';
         $request = $this->getSportsclubsForAssociationRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client

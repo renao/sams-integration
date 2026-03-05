@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSCompetitionMatchesAPIApi
+# SAMSPlugin\RestClient\SAMSCompetitionMatchesAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllCompetitionMatchesWithFilter()`
 
 ```php
-getAllCompetitionMatchesWithFilter($x_api_key, $page, $size, $association, $for_season, $for_competition, $for_sportsclub, $for_team): \OpenAPI\Client\Model\CompetitionMatchPage
+getAllCompetitionMatchesWithFilter($x_api_key, $page, $size, $association, $for_season, $for_competition, $for_sportsclub, $for_team): \SAMSPlugin\RestClient\Model\CompetitionMatchPage
 ```
 
 Returns all available competition matches as a paged list.
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCompetitionMatchesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCompetitionMatchesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -65,7 +65,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionMatchPage**](../Model/CompetitionMatchPage.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionMatchPage**](../Model/CompetitionMatchPage.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ No authorization required
 ## `getCompetitionMatchByUuid()`
 
 ```php
-getCompetitionMatchByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\CompetitionMatchDto
+getCompetitionMatchByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\CompetitionMatchDto
 ```
 
 Returns a competition match identified by the given UUID
@@ -96,7 +96,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCompetitionMatchesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCompetitionMatchesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -121,7 +121,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionMatchDto**](../Model/CompetitionMatchDto.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionMatchDto**](../Model/CompetitionMatchDto.md)
 
 ### Authorization
 

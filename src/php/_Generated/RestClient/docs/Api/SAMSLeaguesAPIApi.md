@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSLeaguesAPIApi
+# SAMSPlugin\RestClient\SAMSLeaguesAPIApi
 
 
 
@@ -16,7 +16,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllLeagues()`
 
 ```php
-getAllLeagues($x_api_key, $page, $size, $association, $season): \OpenAPI\Client\Model\LeaguePage
+getAllLeagues($x_api_key, $page, $size, $association, $season): \SAMSPlugin\RestClient\Model\LeaguePage
 ```
 
 Returns all available leagues as a paged list. The default page size is 20. The page size must not be greater than 100
@@ -29,7 +29,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeaguesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeaguesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeaguePage**](../Model/LeaguePage.md)
+[**\SAMSPlugin\RestClient\Model\LeaguePage**](../Model/LeaguePage.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ No authorization required
 ## `getLeagueByUuid()`
 
 ```php
-getLeagueByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\LeagueDto
+getLeagueByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\LeagueDto
 ```
 
 Returns a league identified by the given UUID
@@ -91,7 +91,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeaguesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeaguesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueDto**](../Model/LeagueDto.md)
+[**\SAMSPlugin\RestClient\Model\LeagueDto**](../Model/LeagueDto.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 ## `getMatchDaysForLeague()`
 
 ```php
-getMatchDaysForLeague($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\LeagueMatchDayPage
+getMatchDaysForLeague($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\LeagueMatchDayPage
 ```
 
 Returns all match days corresponding to the league identified by the given UUID
@@ -147,7 +147,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeaguesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeaguesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -176,7 +176,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueMatchDayPage**](../Model/LeagueMatchDayPage.md)
+[**\SAMSPlugin\RestClient\Model\LeagueMatchDayPage**](../Model/LeagueMatchDayPage.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ No authorization required
 ## `getRankingsForLeague()`
 
 ```php
-getRankingsForLeague($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\LeagueRankingsResourcePage
+getRankingsForLeague($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\LeagueRankingsResourcePage
 ```
 
 Returns the rankings of a league identified by the given UUID.
@@ -207,7 +207,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeaguesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeaguesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -236,7 +236,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueRankingsResourcePage**](../Model/LeagueRankingsResourcePage.md)
+[**\SAMSPlugin\RestClient\Model\LeagueRankingsResourcePage**](../Model/LeagueRankingsResourcePage.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ No authorization required
 ## `getTeamsForLeague()`
 
 ```php
-getTeamsForLeague($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\TeamPage
+getTeamsForLeague($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\TeamPage
 ```
 
 Returns all teams of a league identified by the given UUID as a paged list. The default page size is 20. The page size must not be greater than 100
@@ -267,7 +267,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeaguesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeaguesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -296,7 +296,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TeamPage**](../Model/TeamPage.md)
+[**\SAMSPlugin\RestClient\Model\TeamPage**](../Model/TeamPage.md)
 
 ### Authorization
 

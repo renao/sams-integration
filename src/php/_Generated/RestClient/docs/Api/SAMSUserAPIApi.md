@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSUserAPIApi
+# SAMSPlugin\RestClient\SAMSUserAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getCurrentUser()`
 
 ```php
-getCurrentUser($x_api_key): \OpenAPI\Client\Model\UserDetailsDto
+getCurrentUser($x_api_key): \SAMSPlugin\RestClient\Model\UserDetailsDto
 ```
 
 Retrieves the user data for the current user identified by the mandatory JSON web token authorization header
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSUserAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSUserAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -49,7 +49,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserDetailsDto**](../Model/UserDetailsDto.md)
+[**\SAMSPlugin\RestClient\Model\UserDetailsDto**](../Model/UserDetailsDto.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `userDetailsRootLinks()`
 
 ```php
-userDetailsRootLinks($x_api_key): \OpenAPI\Client\Model\HalRepresentation
+userDetailsRootLinks($x_api_key): \SAMSPlugin\RestClient\Model\HalRepresentation
 ```
 
 Provides links to sub resources
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSUserAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSUserAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HalRepresentation**](../Model/HalRepresentation.md)
+[**\SAMSPlugin\RestClient\Model\HalRepresentation**](../Model/HalRepresentation.md)
 
 ### Authorization
 

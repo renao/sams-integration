@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client\Model
+ * @package  SAMSPlugin\RestClient\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package OpenAPI\Client\Model
+ * @package SAMSPlugin\RestClient\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

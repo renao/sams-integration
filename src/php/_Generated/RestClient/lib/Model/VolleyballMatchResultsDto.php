@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * VolleyballMatchResultsDto Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class VolleyballMatchResultsDto implements ModelInterface, ArrayAccess, \JsonSer
         'winner_name' => 'string',
         'set_points' => 'string',
         'ball_points' => 'string',
-        'sets' => '\OpenAPI\Client\Model\VolleyballMatchSetRestDto[]'
+        'sets' => '\SAMSPlugin\RestClient\Model\VolleyballMatchSetRestDto[]'
     ];
 
     /**
@@ -428,7 +428,7 @@ class VolleyballMatchResultsDto implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets sets
      *
-     * @return \OpenAPI\Client\Model\VolleyballMatchSetRestDto[]|null
+     * @return \SAMSPlugin\RestClient\Model\VolleyballMatchSetRestDto[]|null
      */
     public function getSets()
     {
@@ -438,7 +438,7 @@ class VolleyballMatchResultsDto implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets sets
      *
-     * @param \OpenAPI\Client\Model\VolleyballMatchSetRestDto[]|null $sets sets
+     * @param \SAMSPlugin\RestClient\Model\VolleyballMatchSetRestDto[]|null $sets sets
      *
      * @return self
      */

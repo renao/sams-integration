@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * LeagueMatchDto Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'uuid' => 'string',
-        '_links' => 'array<string,\OpenAPI\Client\Model\LinkDto>',
+        '_links' => 'array<string,\SAMSPlugin\RestClient\Model\LinkDto>',
         '_embedded' => 'array<string,object>',
         'date' => '\DateTime',
         'time' => 'string',
@@ -66,16 +66,16 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'deciding_match' => 'bool',
         'game_reassessed' => 'bool',
         'host' => 'string',
-        'referees' => '\OpenAPI\Client\Model\RefereeTeamDto',
+        'referees' => '\SAMSPlugin\RestClient\Model\RefereeTeamDto',
         'spectators' => 'int',
         'net_duration' => 'int',
         'verified' => 'bool',
-        'location' => '\OpenAPI\Client\Model\Location',
+        'location' => '\SAMSPlugin\RestClient\Model\Location',
         'season_uuid' => 'string',
         'association_uuid' => 'string',
         'team1_description' => 'string',
         'team2_description' => 'string',
-        'results' => '\OpenAPI\Client\Model\VolleyballMatchResultsDto',
+        'results' => '\SAMSPlugin\RestClient\Model\VolleyballMatchResultsDto',
         'match_day_uuid' => 'string',
         'league_uuid' => 'string',
         'indefinitely_rescheduled' => 'bool',
@@ -473,7 +473,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets _links
      *
-     * @return array<string,\OpenAPI\Client\Model\LinkDto>|null
+     * @return array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null
      */
     public function getLinks()
     {
@@ -483,7 +483,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets _links
      *
-     * @param array<string,\OpenAPI\Client\Model\LinkDto>|null $_links _links
+     * @param array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null $_links _links
      *
      * @return self
      */
@@ -689,7 +689,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets referees
      *
-     * @return \OpenAPI\Client\Model\RefereeTeamDto|null
+     * @return \SAMSPlugin\RestClient\Model\RefereeTeamDto|null
      */
     public function getReferees()
     {
@@ -699,7 +699,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets referees
      *
-     * @param \OpenAPI\Client\Model\RefereeTeamDto|null $referees referees
+     * @param \SAMSPlugin\RestClient\Model\RefereeTeamDto|null $referees referees
      *
      * @return self
      */
@@ -797,7 +797,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets location
      *
-     * @return \OpenAPI\Client\Model\Location|null
+     * @return \SAMSPlugin\RestClient\Model\Location|null
      */
     public function getLocation()
     {
@@ -807,7 +807,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets location
      *
-     * @param \OpenAPI\Client\Model\Location|null $location location
+     * @param \SAMSPlugin\RestClient\Model\Location|null $location location
      *
      * @return self
      */
@@ -932,7 +932,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\VolleyballMatchResultsDto|null
+     * @return \SAMSPlugin\RestClient\Model\VolleyballMatchResultsDto|null
      */
     public function getResults()
     {
@@ -942,7 +942,7 @@ class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\VolleyballMatchResultsDto|null $results results
+     * @param \SAMSPlugin\RestClient\Model\VolleyballMatchResultsDto|null $results results
      *
      * @return self
      */

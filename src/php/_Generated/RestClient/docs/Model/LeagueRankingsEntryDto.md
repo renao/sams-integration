@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Entity unique identifier | [optional]
-**_links** | [**array<string,\OpenAPI\Client\Model\LinkDto>**](LinkDto.md) |  | [optional]
+**_links** | [**array<string,\SAMSPlugin\RestClient\Model\LinkDto>**](LinkDto.md) |  | [optional]
 **_embedded** | **array<string,object>** |  | [optional]
 **team_name** | **string** |  | [optional]
 **rank** | **int** |  | [optional]
@@ -22,6 +22,6 @@ Name | Type | Description | Notes
 **ball_losses** | **int** |  | [optional]
 **ball_difference** | **int** |  | [optional]
 **ball_ratio** | **float** |  | [optional]
-**result_types** | [**\OpenAPI\Client\Model\MatchResultTypeCount[]**](MatchResultTypeCount.md) |  | [optional]
+**result_types** | [**\SAMSPlugin\RestClient\Model\MatchResultTypeCount[]**](MatchResultTypeCount.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

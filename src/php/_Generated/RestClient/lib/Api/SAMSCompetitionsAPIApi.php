@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SAMSPlugin\RestClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\FormDataProcessor;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SAMSPlugin\RestClient\ApiException;
+use SAMSPlugin\RestClient\Configuration;
+use SAMSPlugin\RestClient\FormDataProcessor;
+use SAMSPlugin\RestClient\HeaderSelector;
+use SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * SAMSCompetitionsAPIApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,9 +149,9 @@ class SAMSCompetitionsAPIApi
      * @param  string|null $season Filter for season using the given UUID. Defaults to no filtering. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllCompetitions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionPage
      */
     public function getAllCompetitions($x_api_key = null, $page = null, $size = null, $association = null, $season = null, string $contentType = self::contentTypes['getAllCompetitions'][0])
     {
@@ -171,9 +171,9 @@ class SAMSCompetitionsAPIApi
      * @param  string|null $season Filter for season using the given UUID. Defaults to no filtering. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAllCompetitions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllCompetitionsWithHttpInfo($x_api_key = null, $page = null, $size = null, $association = null, $season = null, string $contentType = self::contentTypes['getAllCompetitions'][0])
     {
@@ -205,31 +205,31 @@ class SAMSCompetitionsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CompetitionPage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionPage',
                         $request,
                         $response,
                     );
@@ -251,7 +251,7 @@ class SAMSCompetitionsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CompetitionPage',
+                '\SAMSPlugin\RestClient\Model\CompetitionPage',
                 $request,
                 $response,
             );
@@ -260,7 +260,7 @@ class SAMSCompetitionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -268,7 +268,7 @@ class SAMSCompetitionsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -276,7 +276,7 @@ class SAMSCompetitionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -284,7 +284,7 @@ class SAMSCompetitionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -292,7 +292,7 @@ class SAMSCompetitionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CompetitionPage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,7 +346,7 @@ class SAMSCompetitionsAPIApi
      */
     public function getAllCompetitionsAsyncWithHttpInfo($x_api_key = null, $page = null, $size = null, $association = null, $season = null, string $contentType = self::contentTypes['getAllCompetitions'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CompetitionPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\CompetitionPage';
         $request = $this->getAllCompetitionsRequest($x_api_key, $page, $size, $association, $season, $contentType);
 
         return $this->client
@@ -520,9 +520,9 @@ class SAMSCompetitionsAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompetitionByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionDto
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionDto
      */
     public function getCompetitionByUuid($uuid, $x_api_key = null, string $contentType = self::contentTypes['getCompetitionByUuid'][0])
     {
@@ -539,9 +539,9 @@ class SAMSCompetitionsAPIApi
      * @param  string|null $x_api_key A SAMS API key with permission to access this API. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompetitionByUuid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompetitionByUuidWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getCompetitionByUuid'][0])
     {
@@ -573,31 +573,31 @@ class SAMSCompetitionsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CompetitionDto',
+                        '\SAMSPlugin\RestClient\Model\CompetitionDto',
                         $request,
                         $response,
                     );
@@ -619,7 +619,7 @@ class SAMSCompetitionsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CompetitionDto',
+                '\SAMSPlugin\RestClient\Model\CompetitionDto',
                 $request,
                 $response,
             );
@@ -628,7 +628,7 @@ class SAMSCompetitionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -636,7 +636,7 @@ class SAMSCompetitionsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -644,7 +644,7 @@ class SAMSCompetitionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -652,7 +652,7 @@ class SAMSCompetitionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -660,7 +660,7 @@ class SAMSCompetitionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CompetitionDto',
+                        '\SAMSPlugin\RestClient\Model\CompetitionDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -708,7 +708,7 @@ class SAMSCompetitionsAPIApi
      */
     public function getCompetitionByUuidAsyncWithHttpInfo($uuid, $x_api_key = null, string $contentType = self::contentTypes['getCompetitionByUuid'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CompetitionDto';
+        $returnType = '\SAMSPlugin\RestClient\Model\CompetitionDto';
         $request = $this->getCompetitionByUuidRequest($uuid, $x_api_key, $contentType);
 
         return $this->client
@@ -856,9 +856,9 @@ class SAMSCompetitionsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatchGroupsForCompetition'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionMatchGroupPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage
      */
     public function getMatchGroupsForCompetition($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getMatchGroupsForCompetition'][0])
     {
@@ -877,9 +877,9 @@ class SAMSCompetitionsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatchGroupsForCompetition'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionMatchGroupPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMatchGroupsForCompetitionWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getMatchGroupsForCompetition'][0])
     {
@@ -911,31 +911,31 @@ class SAMSCompetitionsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CompetitionMatchGroupPage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage',
                         $request,
                         $response,
                     );
@@ -957,7 +957,7 @@ class SAMSCompetitionsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CompetitionMatchGroupPage',
+                '\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage',
                 $request,
                 $response,
             );
@@ -966,7 +966,7 @@ class SAMSCompetitionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -974,7 +974,7 @@ class SAMSCompetitionsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -982,7 +982,7 @@ class SAMSCompetitionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -990,7 +990,7 @@ class SAMSCompetitionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -998,7 +998,7 @@ class SAMSCompetitionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CompetitionMatchGroupPage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1050,7 +1050,7 @@ class SAMSCompetitionsAPIApi
      */
     public function getMatchGroupsForCompetitionAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getMatchGroupsForCompetition'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CompetitionMatchGroupPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\CompetitionMatchGroupPage';
         $request = $this->getMatchGroupsForCompetitionRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client
@@ -1220,9 +1220,9 @@ class SAMSCompetitionsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRankingsForCompetition'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionRankingsResourcePage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage
      */
     public function getRankingsForCompetition($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getRankingsForCompetition'][0])
     {
@@ -1241,9 +1241,9 @@ class SAMSCompetitionsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRankingsForCompetition'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\CompetitionRankingsResourcePage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRankingsForCompetitionWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getRankingsForCompetition'][0])
     {
@@ -1275,31 +1275,31 @@ class SAMSCompetitionsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\CompetitionRankingsResourcePage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage',
                         $request,
                         $response,
                     );
@@ -1321,7 +1321,7 @@ class SAMSCompetitionsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\CompetitionRankingsResourcePage',
+                '\SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage',
                 $request,
                 $response,
             );
@@ -1330,7 +1330,7 @@ class SAMSCompetitionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1338,7 +1338,7 @@ class SAMSCompetitionsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1346,7 +1346,7 @@ class SAMSCompetitionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1354,7 +1354,7 @@ class SAMSCompetitionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1362,7 +1362,7 @@ class SAMSCompetitionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CompetitionRankingsResourcePage',
+                        '\SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1414,7 +1414,7 @@ class SAMSCompetitionsAPIApi
      */
     public function getRankingsForCompetitionAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getRankingsForCompetition'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CompetitionRankingsResourcePage';
+        $returnType = '\SAMSPlugin\RestClient\Model\CompetitionRankingsResourcePage';
         $request = $this->getRankingsForCompetitionRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client
@@ -1584,9 +1584,9 @@ class SAMSCompetitionsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTeamsForCompetition'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\TeamPage
+     * @return \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\TeamPage
      */
     public function getTeamsForCompetition($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getTeamsForCompetition'][0])
     {
@@ -1605,9 +1605,9 @@ class SAMSCompetitionsAPIApi
      * @param  int|null $size Requested number of items per page. Defaults to 20. The maximum allowed value is 100 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTeamsForCompetition'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SAMSPlugin\RestClient\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ValidationError|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseExceptionMessage|\OpenAPI\Client\Model\ResponseException|\OpenAPI\Client\Model\TeamPage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SAMSPlugin\RestClient\Model\ValidationError|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseExceptionMessage|\SAMSPlugin\RestClient\Model\ResponseException|\SAMSPlugin\RestClient\Model\TeamPage, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTeamsForCompetitionWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getTeamsForCompetition'][0])
     {
@@ -1639,31 +1639,31 @@ class SAMSCompetitionsAPIApi
             switch($statusCode) {
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 403:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $request,
                         $response,
                     );
                 case 500:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $request,
                         $response,
                     );
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\TeamPage',
+                        '\SAMSPlugin\RestClient\Model\TeamPage',
                         $request,
                         $response,
                     );
@@ -1685,7 +1685,7 @@ class SAMSCompetitionsAPIApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\TeamPage',
+                '\SAMSPlugin\RestClient\Model\TeamPage',
                 $request,
                 $response,
             );
@@ -1694,7 +1694,7 @@ class SAMSCompetitionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ValidationError',
+                        '\SAMSPlugin\RestClient\Model\ValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1702,7 +1702,7 @@ class SAMSCompetitionsAPIApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1710,7 +1710,7 @@ class SAMSCompetitionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseExceptionMessage',
+                        '\SAMSPlugin\RestClient\Model\ResponseExceptionMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1718,7 +1718,7 @@ class SAMSCompetitionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseException',
+                        '\SAMSPlugin\RestClient\Model\ResponseException',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1726,7 +1726,7 @@ class SAMSCompetitionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TeamPage',
+                        '\SAMSPlugin\RestClient\Model\TeamPage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1778,7 +1778,7 @@ class SAMSCompetitionsAPIApi
      */
     public function getTeamsForCompetitionAsyncWithHttpInfo($uuid, $x_api_key = null, $page = null, $size = null, string $contentType = self::contentTypes['getTeamsForCompetition'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TeamPage';
+        $returnType = '\SAMSPlugin\RestClient\Model\TeamPage';
         $request = $this->getTeamsForCompetitionRequest($uuid, $x_api_key, $page, $size, $contentType);
 
         return $this->client

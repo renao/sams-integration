@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * CommitteeMember Class Doc Comment
  *
  * @category Class
  * @description A member of a committee. Personal data may be null if its visibility has been restricted.
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -67,7 +67,7 @@ class CommitteeMember implements ModelInterface, ArrayAccess, \JsonSerializable
         'last_name' => 'string',
         'email' => 'string',
         'priority' => 'int',
-        'address' => '\OpenAPI\Client\Model\Address',
+        'address' => '\SAMSPlugin\RestClient\Model\Address',
         'phone_mobile' => 'string',
         'fax' => 'string',
         'phone_work' => 'string',
@@ -641,7 +641,7 @@ class CommitteeMember implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\Address|null
+     * @return \SAMSPlugin\RestClient\Model\Address|null
      */
     public function getAddress()
     {
@@ -651,7 +651,7 @@ class CommitteeMember implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\Address|null $address address
+     * @param \SAMSPlugin\RestClient\Model\Address|null $address address
      *
      * @return self
      */

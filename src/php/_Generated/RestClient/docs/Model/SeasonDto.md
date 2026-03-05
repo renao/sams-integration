@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Entity unique identifier | [optional]
-**_links** | [**array<string,\OpenAPI\Client\Model\LinkDto>**](LinkDto.md) |  | [optional]
+**_links** | [**array<string,\SAMSPlugin\RestClient\Model\LinkDto>**](LinkDto.md) |  | [optional]
 **_embedded** | **array<string,object>** |  | [optional]
 **name** | **string** |  | [optional]
 **start_date** | **string** |  | [optional]

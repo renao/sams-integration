@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * LeagueRankingsEntryDto Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class LeagueRankingsEntryDto implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'uuid' => 'string',
-        '_links' => 'array<string,\OpenAPI\Client\Model\LinkDto>',
+        '_links' => 'array<string,\SAMSPlugin\RestClient\Model\LinkDto>',
         '_embedded' => 'array<string,object>',
         'team_name' => 'string',
         'rank' => 'int',
@@ -75,7 +75,7 @@ class LeagueRankingsEntryDto implements ModelInterface, ArrayAccess, \JsonSerial
         'ball_losses' => 'int',
         'ball_difference' => 'int',
         'ball_ratio' => 'float',
-        'result_types' => '\OpenAPI\Client\Model\MatchResultTypeCount[]'
+        'result_types' => '\SAMSPlugin\RestClient\Model\MatchResultTypeCount[]'
     ];
 
     /**
@@ -445,7 +445,7 @@ class LeagueRankingsEntryDto implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets _links
      *
-     * @return array<string,\OpenAPI\Client\Model\LinkDto>|null
+     * @return array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null
      */
     public function getLinks()
     {
@@ -455,7 +455,7 @@ class LeagueRankingsEntryDto implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets _links
      *
-     * @param array<string,\OpenAPI\Client\Model\LinkDto>|null $_links _links
+     * @param array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null $_links _links
      *
      * @return self
      */
@@ -904,7 +904,7 @@ class LeagueRankingsEntryDto implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets result_types
      *
-     * @return \OpenAPI\Client\Model\MatchResultTypeCount[]|null
+     * @return \SAMSPlugin\RestClient\Model\MatchResultTypeCount[]|null
      */
     public function getResultTypes()
     {
@@ -914,7 +914,7 @@ class LeagueRankingsEntryDto implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets result_types
      *
-     * @param \OpenAPI\Client\Model\MatchResultTypeCount[]|null $result_types result_types
+     * @param \SAMSPlugin\RestClient\Model\MatchResultTypeCount[]|null $result_types result_types
      *
      * @return self
      */

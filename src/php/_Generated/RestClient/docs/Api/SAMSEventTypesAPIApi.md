@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSEventTypesAPIApi
+# SAMSPlugin\RestClient\SAMSEventTypesAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getEventTypeByUuid()`
 
 ```php
-getEventTypeByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\EventType
+getEventTypeByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\EventType
 ```
 
 Returns an event type identified by the given UUID
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSEventTypesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSEventTypesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EventType**](../Model/EventType.md)
+[**\SAMSPlugin\RestClient\Model\EventType**](../Model/EventType.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `getEventTypes()`
 
 ```php
-getEventTypes($x_api_key, $association): \OpenAPI\Client\Model\EventType
+getEventTypes($x_api_key, $association): \SAMSPlugin\RestClient\Model\EventType
 ```
 
 Returns all available event types.
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSEventTypesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSEventTypesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -107,7 +107,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EventType**](../Model/EventType.md)
+[**\SAMSPlugin\RestClient\Model\EventType**](../Model/EventType.md)
 
 ### Authorization
 

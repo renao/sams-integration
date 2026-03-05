@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SAMSPlugin\RestClient\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SAMSPlugin\RestClient\ObjectSerializer;
 
 /**
  * CompetitionMatchGroupRankingsDto Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SAMSPlugin\RestClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class CompetitionMatchGroupRankingsDto implements ModelInterface, ArrayAccess, \
       */
     protected static $openAPITypes = [
         'uuid' => 'string',
-        '_links' => 'array<string,\OpenAPI\Client\Model\LinkDto>',
+        '_links' => 'array<string,\SAMSPlugin\RestClient\Model\LinkDto>',
         '_embedded' => 'array<string,object>',
         'match_group_name' => 'string',
-        'rankings' => '\OpenAPI\Client\Model\LeagueRankingsEntryDto[]'
+        'rankings' => '\SAMSPlugin\RestClient\Model\LeagueRankingsEntryDto[]'
     ];
 
     /**
@@ -347,7 +347,7 @@ class CompetitionMatchGroupRankingsDto implements ModelInterface, ArrayAccess, \
     /**
      * Gets _links
      *
-     * @return array<string,\OpenAPI\Client\Model\LinkDto>|null
+     * @return array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null
      */
     public function getLinks()
     {
@@ -357,7 +357,7 @@ class CompetitionMatchGroupRankingsDto implements ModelInterface, ArrayAccess, \
     /**
      * Sets _links
      *
-     * @param array<string,\OpenAPI\Client\Model\LinkDto>|null $_links _links
+     * @param array<string,\SAMSPlugin\RestClient\Model\LinkDto>|null $_links _links
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class CompetitionMatchGroupRankingsDto implements ModelInterface, ArrayAccess, \
     /**
      * Gets rankings
      *
-     * @return \OpenAPI\Client\Model\LeagueRankingsEntryDto[]|null
+     * @return \SAMSPlugin\RestClient\Model\LeagueRankingsEntryDto[]|null
      */
     public function getRankings()
     {
@@ -438,7 +438,7 @@ class CompetitionMatchGroupRankingsDto implements ModelInterface, ArrayAccess, \
     /**
      * Sets rankings
      *
-     * @param \OpenAPI\Client\Model\LeagueRankingsEntryDto[]|null $rankings rankings
+     * @param \SAMSPlugin\RestClient\Model\LeagueRankingsEntryDto[]|null $rankings rankings
      *
      * @return self
      */

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **last_name** | **string** |  | [optional]
 **email** | **string** |  | [optional]
 **priority** | **int** |  | [optional]
-**address** | [**\OpenAPI\Client\Model\Address**](Address.md) |  | [optional]
+**address** | [**\SAMSPlugin\RestClient\Model\Address**](Address.md) |  | [optional]
 **phone_mobile** | **string** |  | [optional]
 **fax** | **string** |  | [optional]
 **phone_work** | **string** |  | [optional]

@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSCommitteesAPIApi
+# SAMSPlugin\RestClient\SAMSCommitteesAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllCommittees()`
 
 ```php
-getAllCommittees($x_api_key, $page, $size): \OpenAPI\Client\Model\CommitteePage
+getAllCommittees($x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\CommitteePage
 ```
 
 Returns the list of available committees as a paged list.
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCommitteesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCommitteesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CommitteePage**](../Model/CommitteePage.md)
+[**\SAMSPlugin\RestClient\Model\CommitteePage**](../Model/CommitteePage.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 ## `getCommittee()`
 
 ```php
-getCommittee($uuid, $x_api_key): \OpenAPI\Client\Model\Committee
+getCommittee($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\Committee
 ```
 
 Returns a committee identified by the given UUID
@@ -88,7 +88,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSCommitteesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSCommitteesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -113,7 +113,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Committee**](../Model/Committee.md)
+[**\SAMSPlugin\RestClient\Model\Committee**](../Model/Committee.md)
 
 ### Authorization
 

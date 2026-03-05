@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Entity unique identifier | [optional]
-**_links** | [**array<string,\OpenAPI\Client\Model\LinkDto>**](LinkDto.md) |  | [optional]
+**_links** | [**array<string,\SAMSPlugin\RestClient\Model\LinkDto>**](LinkDto.md) |  | [optional]
 **_embedded** | **array<string,object>** |  | [optional]
 **name** | **string** |  | [optional]
 **shortname** | **string** |  | [optional]
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **maximum_number_of_participants** | **int** |  | [optional]
 **used_capacity** | **int** | Number of registered participants for an event. If this event is a subordinate event, i.e. there is a higher level event, then this value is calculated as the sum of all participants of the higher level event and all participants of this higher level event&#39;s subordinate event. If this event has subordinate events, then this value is calculated as the sum of participants of this event and all its subordinate events. | [optional]
 **registration_uri** | **string** |  | [optional]
-**location** | [**\OpenAPI\Client\Model\Location**](Location.md) |  | [optional]
+**location** | [**\SAMSPlugin\RestClient\Model\Location**](Location.md) |  | [optional]
 **event_type_uuid** | **string** | Reference to the type details for this event | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

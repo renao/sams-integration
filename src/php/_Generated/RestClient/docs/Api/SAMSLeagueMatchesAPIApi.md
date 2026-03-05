@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSLeagueMatchesAPIApi
+# SAMSPlugin\RestClient\SAMSLeagueMatchesAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllLeagueMatches()`
 
 ```php
-getAllLeagueMatches($x_api_key, $page, $size, $association, $for_season, $for_league, $for_sportsclub, $for_team): \OpenAPI\Client\Model\LeagueMatchPage
+getAllLeagueMatches($x_api_key, $page, $size, $association, $for_season, $for_league, $for_sportsclub, $for_team): \SAMSPlugin\RestClient\Model\LeagueMatchPage
 ```
 
 Returns all available league matches as a paged list.
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeagueMatchesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeagueMatchesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -65,7 +65,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueMatchPage**](../Model/LeagueMatchPage.md)
+[**\SAMSPlugin\RestClient\Model\LeagueMatchPage**](../Model/LeagueMatchPage.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ No authorization required
 ## `getLeagueMatchByUuid()`
 
 ```php
-getLeagueMatchByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\LeagueMatchDto
+getLeagueMatchByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\LeagueMatchDto
 ```
 
 Returns a league match identified by the given UUID
@@ -96,7 +96,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeagueMatchesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeagueMatchesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -121,7 +121,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueMatchDto**](../Model/LeagueMatchDto.md)
+[**\SAMSPlugin\RestClient\Model\LeagueMatchDto**](../Model/LeagueMatchDto.md)
 
 ### Authorization
 

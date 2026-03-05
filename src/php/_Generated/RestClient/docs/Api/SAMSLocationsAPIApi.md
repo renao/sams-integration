@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSLocationsAPIApi
+# SAMSPlugin\RestClient\SAMSLocationsAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllLocations()`
 
 ```php
-getAllLocations($x_api_key, $page, $size): \OpenAPI\Client\Model\LocationResourcePage
+getAllLocations($x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\LocationResourcePage
 ```
 
 Returns all available locations as a paged list.
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLocationsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLocationsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LocationResourcePage**](../Model/LocationResourcePage.md)
+[**\SAMSPlugin\RestClient\Model\LocationResourcePage**](../Model/LocationResourcePage.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 ## `getLocationByUuid()`
 
 ```php
-getLocationByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\Location
+getLocationByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\Location
 ```
 
 Returns a location element identified by the given UUID
@@ -88,7 +88,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLocationsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLocationsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -113,7 +113,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Location**](../Model/Location.md)
+[**\SAMSPlugin\RestClient\Model\Location**](../Model/Location.md)
 
 ### Authorization
 

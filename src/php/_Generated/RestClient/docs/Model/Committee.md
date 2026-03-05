@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Entity unique identifier | [optional]
-**_links** | [**array<string,\OpenAPI\Client\Model\LinkDto>**](LinkDto.md) |  | [optional]
+**_links** | [**array<string,\SAMSPlugin\RestClient\Model\LinkDto>**](LinkDto.md) |  | [optional]
 **_embedded** | **array<string,object>** |  | [optional]
 **association_uuid** | **string** | Reference to the association this entity belongs to | [optional]
-**members** | [**\OpenAPI\Client\Model\CommitteeMember[]**](CommitteeMember.md) |  | [optional]
+**members** | [**\SAMSPlugin\RestClient\Model\CommitteeMember[]**](CommitteeMember.md) |  | [optional]
 **name** | **string** |  | [optional]
 **shortname** | **string** |  | [optional]
 **description** | **string** |  | [optional]

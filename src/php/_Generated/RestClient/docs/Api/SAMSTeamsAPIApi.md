@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSTeamsAPIApi
+# SAMSPlugin\RestClient\SAMSTeamsAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllTeams()`
 
 ```php
-getAllTeams($x_api_key, $page, $size, $association): \OpenAPI\Client\Model\TeamPage
+getAllTeams($x_api_key, $page, $size, $association): \SAMSPlugin\RestClient\Model\TeamPage
 ```
 
 Returns all available teams as a paged list.
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSTeamsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSTeamsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TeamPage**](../Model/TeamPage.md)
+[**\SAMSPlugin\RestClient\Model\TeamPage**](../Model/TeamPage.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 ## `getTeamByUuid()`
 
 ```php
-getTeamByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\TeamDto
+getTeamByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\TeamDto
 ```
 
 Returns a team identified by the given UUID
@@ -88,7 +88,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSTeamsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSTeamsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -113,7 +113,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TeamDto**](../Model/TeamDto.md)
+[**\SAMSPlugin\RestClient\Model\TeamDto**](../Model/TeamDto.md)
 
 ### Authorization
 

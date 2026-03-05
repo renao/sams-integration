@@ -1,4 +1,5 @@
 {
+    "name": "renao/sams-integratio-restclient",
     "version": "2.1.0",
     "description": "The SAMS public REST API",
     "keywords": [
@@ -31,9 +32,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": { "SAMSPlugin\\RestClient\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
+        "psr-4": { "SAMSPlugin\\RestClient\\Test\\" : "test/" }
     }
 }

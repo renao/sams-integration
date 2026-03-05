@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSLeagueHierarchiesAPIApi
+# SAMSPlugin\RestClient\SAMSLeagueHierarchiesAPIApi
 
 
 
@@ -16,7 +16,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllLeagueHierarchies()`
 
 ```php
-getAllLeagueHierarchies($x_api_key, $page, $size, $for_season, $association): \OpenAPI\Client\Model\LeagueHierarchyPage
+getAllLeagueHierarchies($x_api_key, $page, $size, $for_season, $association): \SAMSPlugin\RestClient\Model\LeagueHierarchyPage
 ```
 
 Returns all available league hierarchy elements as a paged list.
@@ -31,7 +31,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeagueHierarchiesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeagueHierarchiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -62,7 +62,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueHierarchyPage**](../Model/LeagueHierarchyPage.md)
+[**\SAMSPlugin\RestClient\Model\LeagueHierarchyPage**](../Model/LeagueHierarchyPage.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ No authorization required
 ## `getCompetitionsByLeagueHierarchy()`
 
 ```php
-getCompetitionsByLeagueHierarchy($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\CompetitionPage
+getCompetitionsByLeagueHierarchy($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\CompetitionPage
 ```
 
 Returns all competitions corresponding to the league hierarchy identified by the given UUID
@@ -93,7 +93,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeagueHierarchiesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeagueHierarchiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -122,7 +122,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CompetitionPage**](../Model/CompetitionPage.md)
+[**\SAMSPlugin\RestClient\Model\CompetitionPage**](../Model/CompetitionPage.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ No authorization required
 ## `getLeagueHierarchyByUuid()`
 
 ```php
-getLeagueHierarchyByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\LeagueHierarchyDto
+getLeagueHierarchyByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\LeagueHierarchyDto
 ```
 
 Returns a league hierarchy element identified by the given UUID
@@ -153,7 +153,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeagueHierarchiesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeagueHierarchiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueHierarchyDto**](../Model/LeagueHierarchyDto.md)
+[**\SAMSPlugin\RestClient\Model\LeagueHierarchyDto**](../Model/LeagueHierarchyDto.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ No authorization required
 ## `getLeaguesByLeagueHierarchy()`
 
 ```php
-getLeaguesByLeagueHierarchy($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\LeaguePage
+getLeaguesByLeagueHierarchy($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\LeaguePage
 ```
 
 Returns all leagues corresponding to the league hierarchy identified by the given UUID
@@ -209,7 +209,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeagueHierarchiesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeagueHierarchiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -238,7 +238,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeaguePage**](../Model/LeaguePage.md)
+[**\SAMSPlugin\RestClient\Model\LeaguePage**](../Model/LeaguePage.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ No authorization required
 ## `getSuperCompetitionsByLeagueHierarchy()`
 
 ```php
-getSuperCompetitionsByLeagueHierarchy($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\SuperCompetitionPage
+getSuperCompetitionsByLeagueHierarchy($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\SuperCompetitionPage
 ```
 
 Returns all super competitions corresponding to the league hierarchy identified by the given UUID
@@ -269,7 +269,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSLeagueHierarchiesAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSLeagueHierarchiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -298,7 +298,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SuperCompetitionPage**](../Model/SuperCompetitionPage.md)
+[**\SAMSPlugin\RestClient\Model\SuperCompetitionPage**](../Model/SuperCompetitionPage.md)
 
 ### Authorization
 

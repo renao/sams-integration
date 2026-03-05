@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSSeasonsAPIApi
+# SAMSPlugin\RestClient\SAMSSeasonsAPIApi
 
 
 
@@ -14,7 +14,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllSeasons()`
 
 ```php
-getAllSeasons($x_api_key): \OpenAPI\Client\Model\SeasonDto[]
+getAllSeasons($x_api_key): \SAMSPlugin\RestClient\Model\SeasonDto[]
 ```
 
 Returns all available seasons
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSSeasonsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSSeasonsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -50,7 +50,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SeasonDto[]**](../Model/SeasonDto.md)
+[**\SAMSPlugin\RestClient\Model\SeasonDto[]**](../Model/SeasonDto.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getLeagueHierarchiesForSeason()`
 
 ```php
-getLeagueHierarchiesForSeason($uuid, $x_api_key, $page, $size): \OpenAPI\Client\Model\LeagueHierarchyPage
+getLeagueHierarchiesForSeason($uuid, $x_api_key, $page, $size): \SAMSPlugin\RestClient\Model\LeagueHierarchyPage
 ```
 
 Returns all league hierarchies corresponding to the season identified by the given UUID
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSSeasonsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSSeasonsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -110,7 +110,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LeagueHierarchyPage**](../Model/LeagueHierarchyPage.md)
+[**\SAMSPlugin\RestClient\Model\LeagueHierarchyPage**](../Model/LeagueHierarchyPage.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ No authorization required
 ## `getSeasonByUuid()`
 
 ```php
-getSeasonByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\SeasonDto
+getSeasonByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\SeasonDto
 ```
 
 Returns a season identified by the given UUID
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSSeasonsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSSeasonsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -166,7 +166,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SeasonDto**](../Model/SeasonDto.md)
+[**\SAMSPlugin\RestClient\Model\SeasonDto**](../Model/SeasonDto.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPIClient-php
+# SAMSPlugin\RestClient
 
 The SAMS public REST API
 
@@ -35,7 +35,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
+require_once('/path/to/SAMSPlugin\RestClient/vendor/autoload.php');
 ```
 
 ## Getting Started
@@ -49,7 +49,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSAssociationsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSAssociationsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

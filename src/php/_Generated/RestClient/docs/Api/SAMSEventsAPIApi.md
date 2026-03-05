@@ -1,4 +1,4 @@
-# OpenAPI\Client\SAMSEventsAPIApi
+# SAMSPlugin\RestClient\SAMSEventsAPIApi
 
 
 
@@ -13,7 +13,7 @@ All URIs are relative to https://wvv.sams-server.de/api/v2, except if the operat
 ## `getAllEvents()`
 
 ```php
-getAllEvents($x_api_key, $page, $size, $association): \OpenAPI\Client\Model\EventPage
+getAllEvents($x_api_key, $page, $size, $association): \SAMSPlugin\RestClient\Model\EventPage
 ```
 
 Returns all available events as a paged list. The default page size is 20. The page size must not be greater than 100
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSEventsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSEventsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EventPage**](../Model/EventPage.md)
+[**\SAMSPlugin\RestClient\Model\EventPage**](../Model/EventPage.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 ## `getEventByUuid()`
 
 ```php
-getEventByUuid($uuid, $x_api_key): \OpenAPI\Client\Model\Event
+getEventByUuid($uuid, $x_api_key): \SAMSPlugin\RestClient\Model\Event
 ```
 
 Returns an event identified by the given UUID
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SAMSEventsAPIApi(
+$apiInstance = new SAMSPlugin\RestClient\Api\SAMSEventsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Event**](../Model/Event.md)
+[**\SAMSPlugin\RestClient\Model\Event**](../Model/Event.md)
 
 ### Authorization
 
