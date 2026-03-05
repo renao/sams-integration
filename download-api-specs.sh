@@ -1,3 +1,6 @@
+# !/bin/bash
+
+# SAMS Server URLs
 base_urls=(
     "https://www.volleyball-bundesliga.de"
     "https://www.dvv-ligen.de"
@@ -16,20 +19,43 @@ base_urls=(
     "https://flvb.sams-server.de"
 )
 
-for url in "${base_urls[@]}"; do
-    echo "Downloading API specs from $url"
-    content=$(curl -s "$url/api/v2/swagger.json")
+
+replace_server_url() {
+    local json_content="$1"
+    local base_url="$2"
     
+    echo "$json_content" | jq --arg url "$base_url" 'if .servers then .servers = [{"url": $url}] else . end'
+}
+
+get_api_version() {
+    local json_content="$1"
+    echo "$json_content" | jq -r '.info.version'
+}
+
+get_server_folder() {
+    local url="$1"
+    echo "api-specs/$(echo $url | sed 's/https\?:\/\///g' | sed 's/\//-/g')"
+}
+
+
+for url in "${base_urls[@]}"; do
+    api_base_url="$url/api/v2"
+    echo "Downloading API specs from $url"
+    content=$(curl -s "$api_base_url/swagger.json")
+
     if [[ -z "$content" ]]; then
         echo "Fehler: Kein Content von $url geladen!"
         continue
     fi
 
-    api_version=$(echo "$content" | jq -r '.info.version')
-    server_folder="api-specs/$(echo $url | sed 's/https\?:\/\///g' | sed 's/\//-/g')"
+    content=$(replace_server_url "$content" "$api_base_url")
+
+    api_version=$(get_api_version "$content")
+    server_folder=$(get_server_folder "$url")
+
     filename="$server_folder/${api_version}.json"
     mkdir -p "$server_folder"
-    echo "$content" > "$filename"
+    echo "$content" | jq . > "$filename"
 done
 
 
