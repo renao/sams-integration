@@ -18,13 +18,15 @@
 
     "autoload": {
         "psr-4": {
-            "SAMSPlugin\\": "build/php/"
+            "SAMSPlugin\\": "build/php/",
+            "SAMSPlugin\\RestClient\\": "build/php/_Generated/RestClient/"
         }
     },
   
     "autoload-dev": {
         "psr-4": {
-            "SAMSPlugin\\Tests\\": "/tests/"
+            "SAMSPlugin\\Tests\\": "/tests/",
+            "SAMSPlugin\\RestClient\\Tests\\": "/tests/RestClient/"
         }
     },
     "require":{
