@@ -10,5 +10,4 @@ rm -r release-plugin-directory/trunk/build
 
 cp sams-integration.php release-plugin-directory/trunk
 cp -r build release-plugin-directory/trunk
-
 rm -rf ./build/
