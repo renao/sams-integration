@@ -5756,10 +5756,10 @@
           "competitionUuid": {
             "type": "string"
           },
-          "indefinitelyRescheduled": {
+          "delayPossible": {
             "type": "boolean"
           },
-          "delayPossible": {
+          "indefinitelyRescheduled": {
             "type": "boolean"
           }
         }
@@ -6072,10 +6072,10 @@
           "leagueUuid": {
             "type": "string"
           },
-          "indefinitelyRescheduled": {
+          "delayPossible": {
             "type": "boolean"
           },
-          "delayPossible": {
+          "indefinitelyRescheduled": {
             "type": "boolean"
           }
         }
