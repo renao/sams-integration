@@ -32,52 +32,65 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit( { attributes, setAttributes } )
-{
-	const { samsConfigId, matchSeriesId } = attributes;
+export default function Edit({ attributes, setAttributes }) {
+	// rankingConfig: { samsConfigId, matchSeriesId }
+	const { rankingConfig = {} } = attributes;
+	const { samsConfigId, matchSeriesId } = rankingConfig;
 
 	const configs = useSelect(
 		(select) => select('core').getEntityRecords('postType', 'sams_host_config', { per_page: 100 }),
 		[]
 	);
 
-	const selectedConfig = configs && samsConfigId ? configs.find(config => config.id == samsConfigId) : null;
+	const selectedConfig
+		= configs
+			&& samsConfigId
+			? configs.find(config => config.id == samsConfigId)
+			: null;
 
 	return (
-        <>
-            <InspectorControls>
-                <PanelBody title={ __( 'Settings', 'sams-integration' ) }>
-				{ !configs ? (
-					<p>{ __('Loading ...', 'sams-integration') }</p>
-				) : (
-					<select
-						value={ samsConfigId || '' }
-						onChange={ e => {
-							setAttributes({
-								samsConfigId: e.target.value,
-							});
-						}}
-					>
-						<option value="">{ __('Select SAMS Server', 'sams-integration') }</option>
-						{ configs.map(config => (
-							<option key={config.id} value={config.id}>
-								{config.title?.rendered || config.id}
-							</option>
-						)) }
-					</select>
-				)}
-				<TextControl
-					label={ __('MatchSeriesId', 'sams-integration') }
-					value={ matchSeriesId || '' }
-					onChange={ ( value ) => setAttributes( { matchSeriesId: value } ) }
-				/>
-			</PanelBody>
-		</InspectorControls>
-		<p { ...useBlockProps() }>
-			SAMS Ranking Vorschau:<br />
-			{ __('Config:', 'sams-integration') } { selectedConfig ? (selectedConfig.title?.rendered || selectedConfig.id) : __('None selected', 'sams-integration') }<br />
-			{ __('MatchSeriesId:', 'sams-integration') } { matchSeriesId || __('None', 'sams-integration') }
-		</p>
-        </>
-    );
+		<>
+			<InspectorControls>
+				<PanelBody title={__('Settings', 'sams-integration')}>
+					{!configs ? (
+						<p>{__('Loading ...', 'sams-integration')}</p>
+					) : (
+						<select
+							value={samsConfigId || ''}
+							onChange={e => {
+								setAttributes({
+									rankingConfig: {
+										...rankingConfig,
+										samsConfigId: e.target.value,
+									}
+								});
+							}}
+						>
+							<option value="">{__('Select SAMS Server', 'sams-integration')}</option>
+							{configs.map(config => (
+								<option key={config.id} value={config.id}>
+									{config.title?.rendered || config.id}
+								</option>
+							))}
+						</select>
+					)}
+					<TextControl
+						label={__('MatchSeriesId', 'sams-integration')}
+						value={matchSeriesId || ''}
+						onChange={(value) => setAttributes({
+							rankingConfig: {
+								...rankingConfig,
+								matchSeriesId: value,
+							}
+						})}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<p {...useBlockProps()}>
+				SAMS Ranking Vorschau:<br />
+				{__('Config:', 'sams-integration')} {selectedConfig ? (selectedConfig.title?.rendered || selectedConfig.id) : __('None selected', 'sams-integration')}<br />
+				{__('MatchSeriesId:', 'sams-integration')} {matchSeriesId || __('None', 'sams-integration')}
+			</p>
+		</>
+	);
 }
