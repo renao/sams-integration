@@ -1,4 +1,6 @@
-# !/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
+
 
 # SAMS Server URLs
 base_urls=(
@@ -29,7 +31,7 @@ replace_server_url() {
 
 get_api_version() {
     local json_content="$1"
-    echo "$json_content" | jq -r '.info.version'
+    echo "$json_content" | jq -er '.info.version // empty'
 }
 
 get_server_folder() {
@@ -37,6 +39,10 @@ get_server_folder() {
     echo "api-specs/$(echo $url | sed 's/https\?:\/\///g' | sed 's/\//-/g')"
 }
 
+
+sanitize() {
+  printf '%s' "$1" | sed -E 's/[^A-Za-z0-9._-]+/_/g'
+}
 
 for url in "${base_urls[@]}"; do
     api_base_url="$url/api/v2"
@@ -53,10 +59,7 @@ for url in "${base_urls[@]}"; do
     api_version=$(get_api_version "$content")
     server_folder=$(get_server_folder "$url")
 
-    filename="$server_folder/${api_version}.json"
+    filename="$server_folder/$(sanitize "$api_version").json"
     mkdir -p "$server_folder"
     echo "$content" | jq . > "$filename"
 done
-
-
- 
