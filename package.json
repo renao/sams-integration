@@ -14,6 +14,9 @@
 		"build": "wp-scripts build --webpack-copy-php",
 		"start": "wp-scripts start --webpack-copy-php"
 	},
+	"dependencies": {
+		"@renao/sams-restclient":"file:_Generated/js/RestClient"
+	},
 	"devDependencies": {
 		"@wordpress/scripts": "^31.5.0"
 	}
