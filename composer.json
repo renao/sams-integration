@@ -19,7 +19,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "_Generated/RestClient",
+            "url": "_Generated/php/RestClient",
             "options": {
                 "symlink": false
             }

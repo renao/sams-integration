@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "198c7fd7421b9991746ca7065128dbb2",
+    "content-hash": "2d8ce523a82ba04c3b18fcd3dae505fc",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -541,7 +541,7 @@
             "version": "2.1.0",
             "dist": {
                 "type": "path",
-                "url": "_Generated/RestClient",
+                "url": "_Generated/php/RestClient",
                 "reference": "bf3d4d4bda7324b5f90869be7d61a9971f70b29e"
             },
             "require": {

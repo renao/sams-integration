@@ -1,6 +1,6 @@
 <?php
 /**
- * CompetitionMatchDto
+ * LeagueMatchDto
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \SAMS\RestClient\ObjectSerializer;
 
 /**
- * CompetitionMatchDto Class Doc Comment
+ * LeagueMatchDto Class Doc Comment
  *
  * @category Class
  * @package  SAMS\RestClient
@@ -40,7 +40,7 @@ use \SAMS\RestClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
+class LeagueMatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CompetitionMatchDto';
+    protected static $openAPIModelName = 'LeagueMatchDto';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -76,10 +76,10 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'team1_description' => 'string',
         'team2_description' => 'string',
         'results' => '\SAMS\RestClient\Model\VolleyballMatchResultsDto',
-        'match_group_uuid' => 'string',
-        'competition_uuid' => 'string',
-        'indefinitely_rescheduled' => 'bool',
-        'delay_possible' => 'bool'
+        'match_day_uuid' => 'string',
+        'league_uuid' => 'string',
+        'delay_possible' => 'bool',
+        'indefinitely_rescheduled' => 'bool'
     ];
 
     /**
@@ -109,10 +109,10 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'team1_description' => null,
         'team2_description' => null,
         'results' => null,
-        'match_group_uuid' => null,
-        'competition_uuid' => null,
-        'indefinitely_rescheduled' => null,
-        'delay_possible' => null
+        'match_day_uuid' => null,
+        'league_uuid' => null,
+        'delay_possible' => null,
+        'indefinitely_rescheduled' => null
     ];
 
     /**
@@ -140,10 +140,10 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'team1_description' => false,
         'team2_description' => false,
         'results' => false,
-        'match_group_uuid' => false,
-        'competition_uuid' => false,
-        'indefinitely_rescheduled' => false,
-        'delay_possible' => false
+        'match_day_uuid' => false,
+        'league_uuid' => false,
+        'delay_possible' => false,
+        'indefinitely_rescheduled' => false
     ];
 
     /**
@@ -251,10 +251,10 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'team1_description' => 'team1Description',
         'team2_description' => 'team2Description',
         'results' => 'results',
-        'match_group_uuid' => 'matchGroupUuid',
-        'competition_uuid' => 'competitionUuid',
-        'indefinitely_rescheduled' => 'indefinitelyRescheduled',
-        'delay_possible' => 'delayPossible'
+        'match_day_uuid' => 'matchDayUuid',
+        'league_uuid' => 'leagueUuid',
+        'delay_possible' => 'delayPossible',
+        'indefinitely_rescheduled' => 'indefinitelyRescheduled'
     ];
 
     /**
@@ -282,10 +282,10 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'team1_description' => 'setTeam1Description',
         'team2_description' => 'setTeam2Description',
         'results' => 'setResults',
-        'match_group_uuid' => 'setMatchGroupUuid',
-        'competition_uuid' => 'setCompetitionUuid',
-        'indefinitely_rescheduled' => 'setIndefinitelyRescheduled',
-        'delay_possible' => 'setDelayPossible'
+        'match_day_uuid' => 'setMatchDayUuid',
+        'league_uuid' => 'setLeagueUuid',
+        'delay_possible' => 'setDelayPossible',
+        'indefinitely_rescheduled' => 'setIndefinitelyRescheduled'
     ];
 
     /**
@@ -313,10 +313,10 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'team1_description' => 'getTeam1Description',
         'team2_description' => 'getTeam2Description',
         'results' => 'getResults',
-        'match_group_uuid' => 'getMatchGroupUuid',
-        'competition_uuid' => 'getCompetitionUuid',
-        'indefinitely_rescheduled' => 'getIndefinitelyRescheduled',
-        'delay_possible' => 'getDelayPossible'
+        'match_day_uuid' => 'getMatchDayUuid',
+        'league_uuid' => 'getLeagueUuid',
+        'delay_possible' => 'getDelayPossible',
+        'indefinitely_rescheduled' => 'getIndefinitelyRescheduled'
     ];
 
     /**
@@ -395,10 +395,10 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('team1_description', $data ?? [], null);
         $this->setIfExists('team2_description', $data ?? [], null);
         $this->setIfExists('results', $data ?? [], null);
-        $this->setIfExists('match_group_uuid', $data ?? [], null);
-        $this->setIfExists('competition_uuid', $data ?? [], null);
-        $this->setIfExists('indefinitely_rescheduled', $data ?? [], null);
+        $this->setIfExists('match_day_uuid', $data ?? [], null);
+        $this->setIfExists('league_uuid', $data ?? [], null);
         $this->setIfExists('delay_possible', $data ?? [], null);
+        $this->setIfExists('indefinitely_rescheduled', $data ?? [], null);
     }
 
     /**
@@ -957,82 +957,55 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets match_group_uuid
+     * Gets match_day_uuid
      *
      * @return string|null
      */
-    public function getMatchGroupUuid()
+    public function getMatchDayUuid()
     {
-        return $this->container['match_group_uuid'];
+        return $this->container['match_day_uuid'];
     }
 
     /**
-     * Sets match_group_uuid
+     * Sets match_day_uuid
      *
-     * @param string|null $match_group_uuid match_group_uuid
+     * @param string|null $match_day_uuid match_day_uuid
      *
      * @return self
      */
-    public function setMatchGroupUuid($match_group_uuid)
+    public function setMatchDayUuid($match_day_uuid)
     {
-        if (is_null($match_group_uuid)) {
-            throw new \InvalidArgumentException('non-nullable match_group_uuid cannot be null');
+        if (is_null($match_day_uuid)) {
+            throw new \InvalidArgumentException('non-nullable match_day_uuid cannot be null');
         }
-        $this->container['match_group_uuid'] = $match_group_uuid;
+        $this->container['match_day_uuid'] = $match_day_uuid;
 
         return $this;
     }
 
     /**
-     * Gets competition_uuid
+     * Gets league_uuid
      *
      * @return string|null
      */
-    public function getCompetitionUuid()
+    public function getLeagueUuid()
     {
-        return $this->container['competition_uuid'];
+        return $this->container['league_uuid'];
     }
 
     /**
-     * Sets competition_uuid
+     * Sets league_uuid
      *
-     * @param string|null $competition_uuid competition_uuid
+     * @param string|null $league_uuid league_uuid
      *
      * @return self
      */
-    public function setCompetitionUuid($competition_uuid)
+    public function setLeagueUuid($league_uuid)
     {
-        if (is_null($competition_uuid)) {
-            throw new \InvalidArgumentException('non-nullable competition_uuid cannot be null');
+        if (is_null($league_uuid)) {
+            throw new \InvalidArgumentException('non-nullable league_uuid cannot be null');
         }
-        $this->container['competition_uuid'] = $competition_uuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets indefinitely_rescheduled
-     *
-     * @return bool|null
-     */
-    public function getIndefinitelyRescheduled()
-    {
-        return $this->container['indefinitely_rescheduled'];
-    }
-
-    /**
-     * Sets indefinitely_rescheduled
-     *
-     * @param bool|null $indefinitely_rescheduled indefinitely_rescheduled
-     *
-     * @return self
-     */
-    public function setIndefinitelyRescheduled($indefinitely_rescheduled)
-    {
-        if (is_null($indefinitely_rescheduled)) {
-            throw new \InvalidArgumentException('non-nullable indefinitely_rescheduled cannot be null');
-        }
-        $this->container['indefinitely_rescheduled'] = $indefinitely_rescheduled;
+        $this->container['league_uuid'] = $league_uuid;
 
         return $this;
     }
@@ -1060,6 +1033,33 @@ class CompetitionMatchDto implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable delay_possible cannot be null');
         }
         $this->container['delay_possible'] = $delay_possible;
+
+        return $this;
+    }
+
+    /**
+     * Gets indefinitely_rescheduled
+     *
+     * @return bool|null
+     */
+    public function getIndefinitelyRescheduled()
+    {
+        return $this->container['indefinitely_rescheduled'];
+    }
+
+    /**
+     * Sets indefinitely_rescheduled
+     *
+     * @param bool|null $indefinitely_rescheduled indefinitely_rescheduled
+     *
+     * @return self
+     */
+    public function setIndefinitelyRescheduled($indefinitely_rescheduled)
+    {
+        if (is_null($indefinitely_rescheduled)) {
+            throw new \InvalidArgumentException('non-nullable indefinitely_rescheduled cannot be null');
+        }
+        $this->container['indefinitely_rescheduled'] = $indefinitely_rescheduled;
 
         return $this;
     }
