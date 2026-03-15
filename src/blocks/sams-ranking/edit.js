@@ -15,6 +15,8 @@ import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 
 import { PanelBody, TextControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
+import { SAMSAssociationsAPIApi, ApiClient } from '@renao/sams-restclient';
+import { useEffect, useState } from 'react';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -42,11 +44,66 @@ export default function Edit({ attributes, setAttributes }) {
 		[]
 	);
 
-	const selectedConfig
-		= configs
-			&& samsConfigId
-			? configs.find(config => config.id == samsConfigId)
+	const selectedConfig =
+		configs && samsConfigId
+			? configs.find((config) => config.id == samsConfigId)
 			: null;
+
+	// State für Testabruf
+	const [testResult, setTestResult] = useState(null);
+	const [testError, setTestError] = useState(null);
+	const [isLoading, setIsLoading] = useState(false);
+
+	useEffect(() => {
+		// Testabruf nur wenn beide Werte gesetzt sind
+		if (selectedConfig && matchSeriesId) {
+			setIsLoading(true);
+			setTestResult(null);
+			setTestError(null);
+			const apiBase = selectedConfig.meta?.api_base_url || selectedConfig.api_base_url || selectedConfig.url;
+			const apiKey = selectedConfig.meta?.api_key || selectedConfig.api_key;
+			if (!apiBase) {
+				setTestError('API-URL fehlt in der Konfiguration.');
+				setIsLoading(false);
+				return;
+			}
+			if (!apiKey) {
+				setTestError('API-Key fehlt in der Konfiguration.');
+				setIsLoading(false);
+				return;
+			}
+			const client = new SAMSAssociationsAPIApi(new ApiClient(apiBase));
+
+			//console.log('Starte Testabruf mit API Base:', apiBase, 'und MatchSeriesId:', matchSeriesId);
+			console.log('Verfügbare Methoden im Client:', Object.keys(client));
+
+			var associations =client.getAssociations({
+				xApiKey: apiKey,
+				size: 100
+			});
+
+			return;
+			
+			client.getAssociations(
+				{ 
+					xApiKey: apiKey,
+					size: 100
+				},
+				(err, data, response) => {
+					if (err) {
+						setTestError(err.message || String(err));
+						setIsLoading(false);
+					} else {
+						setTestResult(data);
+						setIsLoading(false);
+					}
+				}
+			);
+		} else {
+			setTestResult(null);
+			setTestError(null);
+		}
+	}, [selectedConfig, matchSeriesId]);
 
 	return (
 		<>
@@ -86,11 +143,22 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<p {...useBlockProps()}>
-				SAMS Ranking Vorschau:<br />
-				{__('Config:', 'sams-integration')} {selectedConfig ? (selectedConfig.title?.rendered || selectedConfig.id) : __('None selected', 'sams-integration')}<br />
-				{__('MatchSeriesId:', 'sams-integration')} {matchSeriesId || __('None', 'sams-integration')}
-			</p>
+			<div {...useBlockProps()}>
+				<p>
+					SAMS Ranking Vorschau:<br />
+					{__('Config:', 'sams-integration')} {selectedConfig ? (selectedConfig.title?.rendered || selectedConfig.id) : __('None selected', 'sams-integration')}<br />
+					{__('MatchSeriesId:', 'sams-integration')} {matchSeriesId || __('None', 'sams-integration')}
+				</p>
+				<div style={{ background: '#f6f6f6', padding: '8px', borderRadius: '4px', fontSize: '90%' }}>
+					<strong>Testabruf:</strong><br />
+					{isLoading && <span>Lade Daten ...</span>}
+					{testError && <span style={{ color: 'red' }}>Fehler: {testError}</span>}
+					{testResult && (
+						<pre style={{ maxHeight: 200, overflow: 'auto' }}>{JSON.stringify(testResult, null, 2)}</pre>
+					)}
+					{!isLoading && !testError && !testResult && <span>Bitte Konfiguration und MatchSeriesId wählen.</span>}
+				</div>
+			</div>
 		</>
 	);
 }
