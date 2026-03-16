@@ -12,11 +12,13 @@
 		"html": false
 	},
 	"attributes": {
-		"samsConfigId": {
-			"type": "string"
-		},
-		"matchSeriesId": {
-			"type": "string"
+		"rankingConfig": {
+			"type": "object",
+			"default": {},
+			"properties": {
+				"samsConfigId": { "type": "string" },
+				"matchSeriesId": { "type": "string" }
+			}
 		}
 	},
 	"textdomain": "sams-integration",

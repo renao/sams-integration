@@ -4,7 +4,7 @@
  * Description:       Displays fixtures and rankings from a SAMS results system
  * Requires at least: 5.6
  * Requires PHP:      7.2
- * Version:           1.2.0
+ * Version:           2.0.0
  * Author:            René Siemer
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -48,3 +48,4 @@ function sams_integration_get_template( $template_name ) {
 }
 
 SAMSPlugin\Base\SAMSHostConfig\Initializer::init();
+SAMSPlugin\Base\SAMSProxy\Initializer::init();

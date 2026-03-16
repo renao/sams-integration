@@ -16,6 +16,16 @@
         "vendor-dir": "build/lib"
     },
 
+    "repositories": [
+        {
+            "type": "path",
+            "url": "_Generated/php/RestClient",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+
     "autoload": {
         "psr-4": {
             "SAMSPlugin\\": "build/php/"
@@ -28,6 +38,7 @@
         }
     },
     "require":{
-        "ext-simplexml": "*"
+        "ext-simplexml": "*",
+        "renao/sams-integration-restclient": "2.1.0"
     }
 }

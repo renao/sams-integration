@@ -1,6 +1,6 @@
 {
 	"name": "sams-integration",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"description": "Displays fixtures and results from a SAMS results system",
 	"author": "René Siemer",
 	"license": "GPL-2.0-or-later",
@@ -13,6 +13,9 @@
 		"plugin-zip": "wp-scripts plugin-zip",
 		"build": "wp-scripts build --webpack-copy-php",
 		"start": "wp-scripts start --webpack-copy-php"
+	},
+	"dependencies": {
+		"@renao/sams-restclient":"file:_Generated/js/RestClient"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^31.5.0"

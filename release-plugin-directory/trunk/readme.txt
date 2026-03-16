@@ -1,9 +1,9 @@
 === SAMS Integration ===
 Contributors:      renao
 Tags:              block
-Tested up to:      6.8
+Tested up to:      6.9
 Requires at least: 5.6.0
-Stable tag:        1.2.0
+Stable tag:        2.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,9 @@ If you or your club is a member of a regional confederation you can get this API
 3. (example) Rendered fixtures integrated to a sample page
 
 == Changelog ==
+
+= 2.0.0 =
+* Replace SAMS XML-Schnittstelle by new REST API
 
 = 1.2.0 =
 * Add customazation options for ranking and fixtures
