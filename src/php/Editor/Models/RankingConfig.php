@@ -3,14 +3,14 @@
 namespace SAMSPlugin\Editor\Models;
 
 class RankingConfig {
-    public ?int $samsHostConfigId;
-    public ?string $matchSeriesId;
-    public ?string $matchSeriesName;
+    public int $samsHostConfigId;
+    public string $matchSeriesId;
+    public string $matchSeriesName;
 
     public function __construct(
-        ?int $samsHostConfigId,
-        ?string $matchSeriesId,
-        ?string $matchSeriesName = "") {
+        int $samsHostConfigId,
+        string $matchSeriesId,
+        string $matchSeriesName = "") {
             
             $this->samsHostConfigId = $samsHostConfigId;
             $this->matchSeriesId = $matchSeriesId;

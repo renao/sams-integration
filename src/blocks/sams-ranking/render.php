@@ -5,31 +5,36 @@
 
 use SAMSPlugin\RankingFetcher;
 use SAMSPlugin\Editor\Models\RankingConfig;
+use SAMSPlugin\Base\SAMSHostConfig\Reader;
 ?>
 
 <div <?php echo get_block_wrapper_attributes(); ?>>
 
 	<?php
 
-	if (isset($attributes['rankingConfig']) && is_array($attributes['rankingConfig'])) {
+	if (isset($attributes['rankingConfig'])
+		&& is_array($attributes['rankingConfig'])
+		&& (isset($attributes['rankingConfig']['samsConfigId'])
+		&& isset($attributes['rankingConfig']['matchSeriesId']))
+	) {
+		
 		$configArr = $attributes['rankingConfig'];
+
 		$rankingConfig = new RankingConfig(
-			samsHostConfigId: $configArr['samsConfigId'] ?? null,
-			matchSeriesId: $configArr['matchSeriesId'] ?? null,
+			samsHostConfigId: $configArr['samsConfigId'],
+			matchSeriesId: $configArr['matchSeriesId'],
 			matchSeriesName: $configArr['matchSeriesName'] ?? "no match series name"
 		);
 
 		if ($rankingConfig->is_valid()) {
-			$config_post = get_post($rankingConfig->samsHostConfigId);
+			$host_config = Reader::Read($rankingConfig->samsHostConfigId);
 
-			if ($config_post) {
-				$associationUrl = get_post_meta($config_post->ID, '_sams_host_config_url', true);
-				$apiKey = get_post_meta($config_post->ID, '_sams_host_config_api_key', true);
+			if ($host_config->is_valid()) {
 
 				$fetcher = new RankingFetcher();
 				$ranking = $fetcher->fetch(
-					baseUrl: $associationUrl,
-					apiKey: $apiKey,
+					baseUrl: $host_config->getBaseUrl(),
+					apiKey: $host_config->getApiKey(),
 					matchSeriesId: $rankingConfig->matchSeriesId
 				);
 

@@ -15,7 +15,7 @@ import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 
 import { PanelBody, TextControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
-import { SAMSAssociationsAPIApi, ApiClient } from '@renao/sams-restclient';
+// Kein direkter API-Client mehr nötig, alles läuft über den WordPress-Proxy
 import { useEffect, useState } from 'react';
 
 /**
@@ -56,54 +56,30 @@ export default function Edit({ attributes, setAttributes }) {
 
 	useEffect(() => {
 		// Testabruf nur wenn beide Werte gesetzt sind
-		if (selectedConfig && matchSeriesId) {
+		if (samsConfigId && matchSeriesId) {
 			setIsLoading(true);
 			setTestResult(null);
 			setTestError(null);
-			const apiBase = selectedConfig.meta?.api_base_url || selectedConfig.api_base_url || selectedConfig.url;
-			const apiKey = selectedConfig.meta?.api_key || selectedConfig.api_key;
-			if (!apiBase) {
-				setTestError('API-URL fehlt in der Konfiguration.');
-				setIsLoading(false);
-				return;
-			}
-			if (!apiKey) {
-				setTestError('API-Key fehlt in der Konfiguration.');
-				setIsLoading(false);
-				return;
-			}
-			const client = new SAMSAssociationsAPIApi(new ApiClient(apiBase));
-
-			//console.log('Starte Testabruf mit API Base:', apiBase, 'und MatchSeriesId:', matchSeriesId);
-			console.log('Verfügbare Methoden im Client:', Object.keys(client));
-
-			var associations =client.getAssociations({
-				xApiKey: apiKey,
-				size: 100
-			});
-
-			return;
-			
-			client.getAssociations(
-				{ 
-					xApiKey: apiKey,
-					size: 100
-				},
-				(err, data, response) => {
-					if (err) {
-						setTestError(err.message || String(err));
-						setIsLoading(false);
-					} else {
-						setTestResult(data);
-						setIsLoading(false);
-					}
-				}
-			);
+			// Passe ggf. den REST-Base-Route an!
+			const restBase = 'sams/v2';
+			fetch(`/wp-json/${restBase}/associations?samsConfigId=${encodeURIComponent(samsConfigId)}&matchSeriesId=${encodeURIComponent(matchSeriesId)}`)
+				.then(res => {
+					if (!res.ok) throw new Error('HTTP ' + res.status);
+					return res.json();
+				})
+				.then(data => {
+					setTestResult(data);
+					setIsLoading(false);
+				})
+				.catch(err => {
+					setTestError(err.message || String(err));
+					setIsLoading(false);
+				});
 		} else {
 			setTestResult(null);
 			setTestError(null);
 		}
-	}, [selectedConfig, matchSeriesId]);
+	}, [samsConfigId, matchSeriesId]);
 
 	return (
 		<>
